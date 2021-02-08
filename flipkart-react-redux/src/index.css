@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+body{
+  background-color: rgb(241,243,246);
+  margin: 0;
+  padding: 0;
+  }
+  #hover:hover{
+  color: blue;
+  }
+  #hover{
+  color: black;
+  padding-left: 30px;
+  
+  }
+  
+      
+  .menu-area{
+  position: static;
+  
+  }
+  .mega-area{
+  
+      position:absolute;
+      width: 100%;
+      padding: 15px;
+  }
+  .dropdown-item{
+  
+      padding: 5px 0;
+      font-size: 15px;
+  
+  }
+  h5{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  }
+  /* end of second navbar */
+  #slide
+  {
+  width: 50px;
+  height: 100px;
+  background-color:white;
+  opacity: 1;
+  border-radius: 5px;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  top: calc(50% - 45px);
+  }
+  /* <!-- end of 1st carousel --> */
+  .card:hover {
+      box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+      transform: translate3D(0, -2px, 0);
+    }
+    .card {
+     
+      background: white;
+      box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+      border-radius: 5px;
+      overflow: hidden;
+      transition: all .2s linear;
+    }
+    #Cardimg{
+      height:120px;
+      width:120px;
+      display: block;
+      margin: 10px auto 0px auto;
+  
+  
+  
+    }
+  
+  
+  .card-link{
+  text-decoration: none;
+  padding: 0px;
+  
+  }
+  /* <!-- end of 2nd carousel --> */
+  /* end of cards */
+  /* end of 3rd carousel */
+  /* end of  2nd Cards */
+  /* end of 4th carousel */
+  /* end of 5th carousel */
+  /* end of 6th carousel */
+  /* end of footer sub-footer  */
+  .card-body li {
+  list-style-type: none;
+  
+  }
+  #title{
+  margin-left: 20px;
+  color: dimgrey;
+  font-size: 14px;
+  
+  }
+  .card-body li a {
+  color: white;
+  font-size: 12px;
+  
+  
+  }
+  .card-body li a:hover{
+  text-decoration: underline;
+  
+  }
+  
