@@ -1,10 +1,14 @@
 
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Components/Home';
 import Addproduct from './Components/Addproduct';
 import Cart from './Components/Cart';
 import Orders from './Components/Orders';
+import Mobiles from './Components/Mobiles';
+import Mobile from './Components/Mobile';
+
+
 
 
 export class App extends Component {
@@ -12,10 +16,16 @@ export class App extends Component {
     return (
       <BrowserRouter>
         <div className="Flipkart">
-          <Route exact path='/' component={Home} />
-          <Route path='/Addproduct' component={Addproduct} />
-          <Route path='/Cart' component={Cart} />
-          <Route path='/Orders' component={Orders} />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/Addproduct' component={Addproduct} />
+            <Route path='/Orders' component={Orders} />
+            <Route path='/Cart' component={Cart} />
+            <Route path='/Mobiles' component={Mobiles} />
+            <Route path='/:Mobile_id' component={Mobile} />
+
+          </Switch>
+
 
         </div>
       </BrowserRouter>

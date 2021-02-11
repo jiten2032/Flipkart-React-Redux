@@ -1,74 +1,82 @@
 import React, { Component } from 'react';
-import logo from '../IMAGES/logo.JPG';
+import Navbar from './Navbar';
+import SubNavbar from './SubNavbar';
 import img1 from '../IMAGES/img1.jpg';
 import img2 from '../IMAGES/img2.jpg';
 import img3 from '../IMAGES/img3.jpg';
 import img4 from '../IMAGES/img4.jpg';
 import img5 from '../IMAGES/img5.jpg';
 import img6 from '../IMAGES/img6.jpg';
-import crousel1img1  from '../IMAGES/crousel1img1.jpeg';
-import crousel1img2  from '../IMAGES/crousel1img2.jpeg';
-import crousel1img3  from '../IMAGES/crousel1img3.jpeg';
-import crousel1img4  from '../IMAGES/crousel1img4.jpeg';
-import crousel1img5  from '../IMAGES/crousel1img5.jpeg';
-import crousel1img6  from '../IMAGES/crousel1img6.jpeg';
-import crousel1img7  from '../IMAGES/crousel1img7.jpeg';
-import crousel1img8  from '../IMAGES/crousel1img8.jpeg';
-import crousel1img9  from '../IMAGES/crousel1img9.jpeg';
-import crousel1img10  from '../IMAGES/crousel1img10.jfif';
+import crousel1img1 from '../IMAGES/crousel1img1.jpeg';
+import crousel1img2 from '../IMAGES/crousel1img2.jpeg';
+import crousel1img3 from '../IMAGES/crousel1img3.jpeg';
+import crousel1img4 from '../IMAGES/crousel1img4.jpeg';
+import crousel1img5 from '../IMAGES/crousel1img5.jpeg';
+import crousel1img6 from '../IMAGES/crousel1img6.jpeg';
+import crousel1img7 from '../IMAGES/crousel1img7.jpeg';
+import crousel1img8 from '../IMAGES/crousel1img8.jpeg';
+import crousel1img9 from '../IMAGES/crousel1img9.jpeg';
+import crousel1img10 from '../IMAGES/crousel1img10.jfif';
 import crousel1img11 from '../IMAGES/crousel1img11.jpg';
-import crousel1img12  from '../IMAGES/crousel1img12.jfif';
+import crousel1img12 from '../IMAGES/crousel1img12.jfif';
 import card1 from '../IMAGES/card1.jpg';
 import card2 from '../IMAGES/card2.jpg';
 import card3 from '../IMAGES/card3.jpg';
-import crousel2img1  from '../IMAGES/crousel2img1.jpeg';
-import crousel2img2  from '../IMAGES/crousel2img2.jpeg';
-import crousel2img3  from '../IMAGES/crousel2img3.jpeg';
-import crousel2img4  from '../IMAGES/crousel2img4.jpeg';
-import crousel2img5  from '../IMAGES/crousel2img5.jpeg';
-import crousel2img6  from '../IMAGES/crousel2img6.jpeg';
-import crousel2img7  from '../IMAGES/crousel2img7.jpeg';
-import crousel2img8  from '../IMAGES/crousel2img8.jpeg';
-import crousel2img9  from '../IMAGES/crousel2img9.webp';
-import crousel2img10  from '../IMAGES/crousel2img10.jfif';
-import crousel2img11  from '../IMAGES/crousel2img11.jfif';
-import crousel2img12  from '../IMAGES/crousel2img12.webp';
+import crousel2img1 from '../IMAGES/crousel2img1.jpeg';
+import crousel2img2 from '../IMAGES/crousel2img2.jpeg';
+import crousel2img3 from '../IMAGES/crousel2img3.jpeg';
+import crousel2img4 from '../IMAGES/crousel2img4.jpeg';
+import crousel2img5 from '../IMAGES/crousel2img5.jpeg';
+import crousel2img6 from '../IMAGES/crousel2img6.jpeg';
+import crousel2img7 from '../IMAGES/crousel2img7.jpeg';
+import crousel2img8 from '../IMAGES/crousel2img8.jpeg';
+import crousel2img9 from '../IMAGES/crousel2img9.webp';
+import crousel2img10 from '../IMAGES/crousel2img10.jfif';
+import crousel2img11 from '../IMAGES/crousel2img11.jfif';
+import crousel2img12 from '../IMAGES/crousel2img12.webp';
 import card4 from '../IMAGES/card4.jpg';
 import card5 from '../IMAGES/card5.jpg';
 import card6 from '../IMAGES/card6.jpg';
-import crousel3img1  from '../IMAGES/crousel3img1.jpeg';
-import crousel3img2  from '../IMAGES/crousel3img2.jpeg';
-import crousel3img3  from '../IMAGES/crousel3img3.jpeg';
-import crousel3img4  from '../IMAGES/crousel3img4.jpeg';
-import crousel3img5  from '../IMAGES/crousel3img5.jpeg';
-import crousel3img6  from '../IMAGES/crousel3img6.jpeg';
-import crousel3img7  from '../IMAGES/crousel3img7.jpeg';
-import crousel3img8  from '../IMAGES/crousel3img8.jpeg';
-import crousel3img9  from '../IMAGES/crousel3img9.jpeg';
-import crousel3img10  from '../IMAGES/crousel3img10.jpeg';
-import crousel3img11  from '../IMAGES/crousel3img11.jpeg';
-import crousel3img12  from '../IMAGES/crousel3img12.jpeg';
-import crousel4img1  from '../IMAGES/crousel4img1.jpeg';
-import crousel4img2  from '../IMAGES/crousel4img2.jpeg';
-import crousel4img3  from '../IMAGES/crousel4img3.jpeg';
-import crousel4img4  from '../IMAGES/crousel4img4.jpeg';
-import crousel4img5  from '../IMAGES/crousel4img5.jpeg';
-import crousel4img6  from '../IMAGES/crousel4img6.jpeg';
-import crousel4img7  from '../IMAGES/crousel4img7.jpeg';
-import crousel4img8  from '../IMAGES/crousel4img8.jpeg';
-import crousel5img1  from '../IMAGES/crousel5img1.jpeg';
-import crousel5img2  from '../IMAGES/crousel5img2.jpeg';
-import crousel5img3  from '../IMAGES/crousel5img3.jpeg';
-import crousel5img4  from '../IMAGES/crousel5img4.jpeg';
-import crousel5img5  from '../IMAGES/crousel5img5.jpeg';
-import crousel5img6  from '../IMAGES/crousel5img6.jpeg';
-import crousel5img7  from '../IMAGES/crousel5img7.jpeg';
-import crousel5img8  from '../IMAGES/crousel5img8.jpeg';
-import crousel5img9  from '../IMAGES/crousel5img9.jpeg';
-import crousel5img10  from '../IMAGES/crousel5img10.jpeg';
-import crousel5img11  from '../IMAGES/crousel5img11.jpeg';
-import crousel5img12  from '../IMAGES/crousel5img12.jpeg';
-import sideimg1  from '../IMAGES/sideimg1.jpeg';
+import crousel3img1 from '../IMAGES/crousel3img1.jpeg';
+import crousel3img2 from '../IMAGES/crousel3img2.jpeg';
+import crousel3img3 from '../IMAGES/crousel3img3.jpeg';
+import crousel3img4 from '../IMAGES/crousel3img4.jpeg';
+import crousel3img5 from '../IMAGES/crousel3img5.jpeg';
+import crousel3img6 from '../IMAGES/crousel3img6.jpeg';
+import crousel3img7 from '../IMAGES/crousel3img7.jpeg';
+import crousel3img8 from '../IMAGES/crousel3img8.jpeg';
+import crousel3img9 from '../IMAGES/crousel3img9.jpeg';
+import crousel3img10 from '../IMAGES/crousel3img10.jpeg';
+import crousel3img11 from '../IMAGES/crousel3img11.jpeg';
+import crousel3img12 from '../IMAGES/crousel3img12.jpeg';
+import crousel4img1 from '../IMAGES/crousel4img1.jpeg';
+import crousel4img2 from '../IMAGES/crousel4img2.jpeg';
+import crousel4img3 from '../IMAGES/crousel4img3.jpeg';
+import crousel4img4 from '../IMAGES/crousel4img4.jpeg';
+import crousel4img5 from '../IMAGES/crousel4img5.jpeg';
+import crousel4img6 from '../IMAGES/crousel4img6.jpeg';
+import crousel4img7 from '../IMAGES/crousel4img7.jpeg';
+import crousel4img8 from '../IMAGES/crousel4img8.jpeg';
+import crousel5img1 from '../IMAGES/crousel5img1.jpeg';
+import crousel5img2 from '../IMAGES/crousel5img2.jpeg';
+import crousel5img3 from '../IMAGES/crousel5img3.jpeg';
+import crousel5img4 from '../IMAGES/crousel5img4.jpeg';
+import crousel5img5 from '../IMAGES/crousel5img5.jpeg';
+import crousel5img6 from '../IMAGES/crousel5img6.jpeg';
+import crousel5img7 from '../IMAGES/crousel5img7.jpeg';
+import crousel5img8 from '../IMAGES/crousel5img8.jpeg';
+import crousel5img9 from '../IMAGES/crousel5img9.jpeg';
+import crousel5img10 from '../IMAGES/crousel5img10.jpeg';
+import crousel5img11 from '../IMAGES/crousel5img11.jpeg';
+import crousel5img12 from '../IMAGES/crousel5img12.jpeg';
+import sideimg1 from '../IMAGES/sideimg1.jpeg';
+import pococ3 from '../IMAGES/pococ3.jpeg';
+import pocom2 from '../IMAGES/pocom2.jpeg';
+import pocox3 from '../IMAGES/pocox3.jpeg';
+import opporeno5 from '../IMAGES/opporeno5.jpeg';
+import realmenarzo20 from '../IMAGES/realmenarzo20.jpeg';
+
+
 
 
 
@@ -78,960 +86,15 @@ export class Home extends Component {
 
         return (
             <div className="flipkart">
-                <div className="container-fluid  bg-primary sticky-top" style={{ height: "55px" }}>
-                    <div className="container ">
-                        <div className="row">
-                            <div className="col-6  d-flex " style={{ marginTop: "8px" }}>
-                                <a className="navbar-brand" href="homepage">
-                                    <img src={logo}   alt="My Img" srcSet="" style={{width:'100px'}} />
-                                </a>
-                                <input className="form-control  " list="datalistOptions"
-                                    placeholder="Search for products,brands and more" style={{ height: "35px" }} />
-                                <button className="btn bg-light btn-outline-light" type="submit" id="button-addon2"
-                                    style={{ height: "35px" }} >
-                                    <i className="material-icons text-primary">search</i>
-                                </button>
-                                <datalist id="datalistOptions">
-                                    <option value="home" />
-                                    <option value="acer aspire 7" />
-                                    <option value="Mobiles" />
-                                    <option value="Laptop bags" />
-                                    <option value="laptop Tables" />
-                                </datalist>
-                            </div>
-                            <div className="col-6 ">
-                                <div className="d-flex justify-content-end ">
 
-                                    <div className="dropdown">
-                                        <a className="btn btn-link dropdown-toggle text-white fw-bolder " href="homepage" role="button"
-                                            id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
-                                            style={{ textDecoration: 'none', fontSize: "large" }}>
-                                            Jiten
-                            </a>
-                                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <li>
-                                                <a className="dropdown-item" href="HOMEPAGELINK" style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }} className='fas'>&#xf183;</i>My
-                                        Profile</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }}
-                                                        className='fab'>&#xf379;</i>SuperCoin Zone</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }} className='fab'>&#xf42e;</i>
-                                        Flipkart Plus Zone</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }} className="fab">&#xf2b0;</i>
-                                        Orders</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }} className='fas'>&#xf004;</i>
-                                        Wishlist</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }} className="fa">&#xf1fe;</i>
-                                        My Chats</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }} className='fas'>&#xf187;</i>
-                                        Coupons</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }} className='fas'>&#xf06b;</i>
-                                        Gift Cards</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }}
-                                                        className="material-icons">&#xe7f4;</i>
-                                        Notification</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }} className='fab'>&#xf91a;</i>
-                                        Logout</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className="dropdown ">
-                                        <a className="btn btn-link dropdown-toggle text-white fw-bolder" href="homepage" role="button"
-                                            id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
-                                            style={{ textDecoration: 'none', fontSize: "large" }}>
-                                            More
-                            </a>
-                                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }}
-                                                        className="material-icons">&#xe7f4;</i>
-                                        Notification & Preferences</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }} className='fas'>&#xf06b;</i>
-                                        Sell on Flipkart</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }} className='fas'>&#xf87b;</i>
-                                        24x7 Customer Care</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }} className='fab'>&#xf36a;</i>
-                                        Advertise</a>
-                                            </li>
-                                            <li>
-                                                <a className="dropdown-item" href="homepage"
-                                                    style={{ textDecoration: 'none', color: "dimgrey" }}>
-                                                    <i style={{ fontSize: '14px', color: 'blue', padding: '7px' }}
-                                                        className="material-icons">&#xe2c4;</i>
-                                        Download</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className="fw-bolder">
-                                        <div className="d-flex" style={{marginTop:'10px',fontSize: "large"}}>
-                                            <div><a href="HOMEAGELINK" style={{ color: "white" }}><i
-                                                className="material-icons">add_shopping_cart</i></a></div>
-                                            <div><a href="HOMEAGELINK" style={{color: 'white',textDecoration: "none"}}> Cart</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <Navbar />
                 {/* End of Navbar */}
 
-                <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ backgroundColor: "rgb(255,255,255)" }}>
-                    <div className="container flex-fill">
-                        <div id="navbarNavDropdown">
-                            <ul className="navbar-nav">
-                                <li className="nav-item dropdown menu-area">
-                                    <a className="nav-link dropdown-toggle " href="homepage" id="hover" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Electronics
-                        </a>
-
-                                    <div className="dropdown-menu mega-area" aria-labelledby="navbarDropdownMenuLink">
-
-                                        <div className="row justify-content-center">
-
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5 className="">Mobiles</h5>
-                                                <a href="homepage" className="dropdown-item">MI</a>
-                                                <a href="homepage" className="dropdown-item">Real Me</a>
-                                                <a href="homepage" className="dropdown-item">Samsung</a>
-                                                <a href="homepage" className="dropdown-item">Infinix</a>
-                                                <a href="homepage" className="dropdown-item">Oppo</a>
-                                                <a href="homepage" className="dropdown-item">Apple</a>
-                                                <a href="homepage" className="dropdown-item">Vivo</a>
-                                                <a href="homepage" className="dropdown-item">Honour</a>
-                                                <a href="homepage" className="dropdown-item">Asus</a>
-                                                <a href="homepage" className="dropdown-item">Poco X2</a>
-                                                <a href="homepage" className="dropdown-item">Real Me Narzo 10</a>
-                                                <a href="homepage" className="dropdown-item">Infinity hot 9</a>
-                                                <a href="homepage" className="dropdown-item">IQOO</a>
-                                                <a href="homepage" className="dropdown-item">Iphone SE</a>
-                                                <a href="homepage" className="dropdown-item">Motorola razr</a>
-                                                <a href="homepage" className="dropdown-item">Real Me Narzo 10a</a>
-                                                <a href="homepage" className="dropdown-item">motorola g8 power lite</a>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Mobile Accessories</h5>
-                                                <a href="homepage" className="dropdown-item">Mobile Case</a>
-                                                <a href="homepage" className="dropdown-item">Headphone & Headsets</a>
-                                                <a href="homepage" className="dropdown-item">Power Banks</a>
-                                                <a href="homepage" className="dropdown-item">Screenguards</a>
-                                                <a href="homepage" className="dropdown-item">Memory Cards</a>
-                                                <a href="homepage" className="dropdown-item">Smart Headphones</a>
-                                                <a href="homepage" className="dropdown-item">Mobile Cables</a>
-                                                <a href="homepage" className="dropdown-item">Mobile Chargers</a>
-                                                <a href="homepage" className="dropdown-item">Memory Holders</a>
-                                                <h5>Smart Wearable Tech</h5>
-                                                <a href="homepage" className="dropdown-item">Smart Watches</a>
-                                                <a href="homepage" className="dropdown-item">Smart Glasses(VR)</a>
-                                                <a href="homepage" className="dropdown-item">Smart Bands</a>
-                                                <h5>Health Care Appliances</h5>
-                                                <a href="homepage" className="dropdown-item">BP Monitors</a>
-                                                <a href="homepage" className="dropdown-item">Weiaghing Scales</a>
-
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Laptops</h5>
-                                                <a href="homepage" className="dropdown-item">Gaming Laptops</a>
-                                                <h5>Desktop PCs</h5>
-                                                <h5>Gaming & Accessories</h5>
-                                                <h5>Computer Accessories</h5>
-                                                <a href="homepage" className="dropdown-item">External Hardisks</a>
-                                                <a href="homepage" className="dropdown-item">Pendrives</a>
-                                                <a href="homepage" className="dropdown-item">Laptop Screens & Decals</a>
-                                                <a href="homepage" className="dropdown-item">Laptop Bags </a>
-                                                <a href="homepage" className="dropdown-item">Mouse</a>
-                                                <h5>Computer Peripherals</h5>
-                                                <a href="homepage" className="dropdown-item">Printers & Ink Catridges</a>
-                                                <a href="homepage" className="dropdown-item">Monitors</a>
-                                                <h5>Tablets</h5>
-                                                <a href="homepage" className="dropdown-item">Apple Ipads</a>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <a href="homepage" className="dropdown-item">Televisions</a>
-                                                <h5>Speakers</h5>
-                                                <a href="homepage" className="dropdown-item">Home Audio Speakers</a>
-                                                <a href="homepage" className="dropdown-item">Home Theaters</a>
-                                                <a href="homepage" className="dropdown-item">Soundbars</a>
-                                                <a href="homepage" className="dropdown-item">Blutooth Speakers</a>
-                                                <a href="homepage" className="dropdown-item">DTH Setop Box</a>
-                                                <h5>Smart Home Automation</h5>
-                                                <a href="homepage" className="dropdown-item">Google Nest</a>
-                                                <h5>Camera</h5>
-                                                <a href="homepage" className="dropdown-item">DSLR & Mirrorless</a>
-                                                <a href="homepage" className="dropdown-item">Compact & Bridge Cameras</a>
-                                                <a href="homepage" className="dropdown-item">Sports & Action</a>
-                                                <h5>Camera Accessories</h5>
-                                                <a href="homepage" className="dropdown-item">Lens</a>
-                                                <a href="homepage" className="dropdown-item">Tripods</a>
-                                                <h5>Network Components</h5>
-                                                <a href="homepage" className="dropdown-item">Routors</a>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Featured</h5>
-                                                <a href="homepage" className="dropdown-item">Google Accessories Store</a>
-                                                <a href="homepage" className="dropdown-item">Laptops on Buyback Guarentees</a>
-                                                <a href="homepage" className="dropdown-item">Flipkart SmartBuy</a>
-                                                <a href="homepage" className="dropdown-item">Li-Polymer Poer Banks</a>
-                                                <a href="homepage" className="dropdown-item">Sony PS4 Pro & Slim</a>
-                                                <a href="homepage" className="dropdown-item">Apple Products</a>
-                                                <a href="homepage" className="dropdown-item">Microsoft Store</a>
-                                                <a href="homepage" className="dropdown-item">Lenove Phab Series</a>
-                                                <a href="homepage" className="dropdown-item">JBL Speakers</a>
-                                                <a href="homepage" className="dropdown-item">Smartphones on Buyback <br /> Guarentee</a>
-                                                <a href="homepage" className="dropdown-item">Phillips</a>
-                                                <a href="homepage" className="dropdown-item">Dr. Morepen</a>
-                                                <a href="homepage" className="dropdown-item">Complete Mobile Protection</a>
-                                                <a href="homepage" className="dropdown-item">Mobile No Cost EMI</a>
-                                                <a href="homepage" className="dropdown-item">Huawei Watch Gt 2e Smart Watch</a>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </li>
-                                <li className="nav-item dropdown menu-area">
-                                    <a className="nav-link dropdown-toggle " href="homepage" id="hover" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        TV & Appliances
-                        </a>
-
-                                    <div className="dropdown-menu mega-area" aria-labelledby="navbarDropdownMenuLink">
-
-                                        <div className="row  ">
-
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5 className="">Televesion</h5>
-                                                <h5 className="">New Lunches</h5>
-                                                <h5 className="">Smart & Ultra HD</h5>
-                                                <h5 className="">Top Brands</h5>
-                                                <a href="homepage" className="dropdown-item">MI</a>
-                                                <a href="homepage" className="dropdown-item">Vu</a>
-                                                <a href="homepage" className="dropdown-item">Thompson</a>
-                                                <a href="homepage" className="dropdown-item">iFFALCON by TCL</a>
-                                                <a href="homepage" className="dropdown-item">Nokia</a>
-                                                <a href="homepage" className="dropdown-item">LG</a>
-                                                <a href="homepage" className="dropdown-item">Realme</a>
-                                                <a href="homepage" className="dropdown-item">Motorola</a>
-                                                <h5 className="">Shop by Screen Size</h5>
-                                                <a href="homepage" className="dropdown-item">24 & below</a>
-                                                <a href="homepage" className="dropdown-item">28 - 32</a>
-                                                <a href="homepage" className="dropdown-item">39 - 43</a>
-                                                <a href="homepage" className="dropdown-item">48 - 55</a>
-                                                <a href="homepage" className="dropdown-item">60 & Above</a>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Washing Machines</h5>
-                                                <a href="homepage" className="dropdown-item">Fully Automated Front Load</a>
-                                                <a href="homepage" className="dropdown-item">Semi Automatic Top Load</a>
-                                                <a href="homepage" className="dropdown-item">Fully Automated Top Load</a>
-                                                <h5>Air Conditioners</h5>
-                                                <a href="homepage" className="dropdown-item">Inveter AC</a>
-                                                <a href="homepage" className="dropdown-item">Split ACs</a>
-                                                <a href="homepage" className="dropdown-item">Window ACs</a>
-                                                <h5>Shop by Brands</h5>
-                                                <a href="homepage" className="dropdown-item">LG</a>
-                                                <a href="homepage" className="dropdown-item">Hitachi</a>
-                                                <a href="homepage" className="dropdown-item">Carrier</a>
-                                                <h5>Refrigerators</h5>
-                                                <a href="homepage" className="dropdown-item">Single Door</a>
-                                                <a href="homepage" className="dropdown-item">Double Door</a>
-                                                <a href="homepage" className="dropdown-item">Triple Door</a>
-                                                <a href="homepage" className="dropdown-item">Side by Side</a>
-                                                <a href="homepage" className="dropdown-item">Convertible</a>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Kitchen Appliances</h5>
-                                                <a href="homepage" className="dropdown-item">Microwave Ovens</a>
-                                                <a href="homepage" className="dropdown-item">Oven Toaster Grills(OTG)</a>
-                                                <a href="homepage" className="dropdown-item">Juicer/Mixer Grinder</a>
-                                                <a href="homepage" className="dropdown-item">Ellectric Kettle</a>
-                                                <a href="homepage" className="dropdown-item">Induction Cooktops</a>
-                                                <a href="homepage" className="dropdown-item">Chimneys</a>
-                                                <a href="homepage" className="dropdown-item">Hand Blenders</a>
-                                                <a href="homepage" className="dropdown-item">Sandwitch Makers</a>
-                                                <a href="homepage" className="dropdown-item">Pop Up Toaster</a>
-                                                <a href="homepage" className="dropdown-item">Electric cooker</a>
-                                                <a href="homepage" className="dropdown-item">West Grinders</a>
-                                                <a href="homepage" className="dropdown-item">Food Processors</a>
-                                                <a href="homepage" className="dropdown-item">Cofee Makers</a>
-                                                <a href="homepage" className="dropdown-item">Dish Washer</a>
-                                                <h5>Healthy Living Appliances</h5>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Small Home Appliances</h5>
-                                                <a href="homepage" className="dropdown-item">Irons</a>
-                                                <a href="homepage" className="dropdown-item">Water Purifiers</a>
-                                                <a href="homepage" className="dropdown-item">Fans</a>
-                                                <a href="homepage" className="dropdown-item">Air Coolers</a>
-                                                <a href="homepage" className="dropdown-item">Inveter</a>
-                                                <a href="homepage" className="dropdown-item">Vacume Cleaner</a>
-                                                <a href="homepage" className="dropdown-item">Sewing Machines</a>
-                                                <a href="homepage" className="dropdown-item">Voltage Stabilizers</a>
-                                                <a href="homepage" className="dropdown-item">Water Geysers</a>
-                                                <a href="homepage" className="dropdown-item">Immersion Rods</a>
-                                                <h5>Top Brands</h5>
-                                                <a href="homepage" className="dropdown-item">Livpure</a>
-                                                <a href="homepage" className="dropdown-item">Philips</a>
-                                                <a href="homepage" className="dropdown-item">Bajaj</a>
-                                                <a href="homepage" className="dropdown-item">IFB</a>
-                                                <a href="homepage" className="dropdown-item">Eureka Forbes</a>
-                                                <a href="homepage" className="dropdown-item">Kaff</a>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Buying Guides</h5>
-                                                <a href="homepage" className="dropdown-item">Televisions</a>
-                                                <a href="homepage" className="dropdown-item">Washing Machines</a>
-                                                <a href="homepage" className="dropdown-item">Refrigerators</a>
-                                                <a href="homepage" className="dropdown-item">Air Conditioners</a>
-                                                <a href="homepage" className="dropdown-item">Water Purifiers</a>
-                                                <a href="homepage" className="dropdown-item">Air Purifiers</a>
-                                                <a href="homepage" className="dropdown-item">Chimneys</a>
-                                                <a href="homepage" className="dropdown-item">Water Geysers</a>
-                                                <h5>New Lunches</h5>
-                                                <a href="homepage" className="dropdown-item">Coocaa Smart TVs</a>
-                                                <a href="homepage" className="dropdown-item">Nokia (55) 4K Android TV</a>
-                                                <a href="homepage" className="dropdown-item">MI (32) 4a Pro Android TV</a>
-                                                <a href="homepage" className="dropdown-item">MarQ (43) FHD Smart TV</a>
-                                                <a href="homepage" className="dropdown-item">LG Refrigerators</a>
-                                                <a href="homepage" className="dropdown-item">Thomson (40) 4K Smart TV</a>
-                                                <a href="homepage" className="dropdown-item">Whirlpool Refrigerators</a>
-                                                <a href="homepage" className="dropdown-item">Kodak (22) (32) LED TVs</a>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </li>
-                                <li className="nav-item dropdown menu-area">
-                                    <a className="nav-link dropdown-toggle " href="homepage" id="hover" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Mens
-                        </a>
-
-                                    <div className="dropdown-menu mega-area" aria-labelledby="navbarDropdownMenuLink">
-
-                                        <div className="row justify-content-center">
-
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5 className="">Footwear</h5>
-
-                                                <a href="homepage" className="dropdown-item">Sports Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Casual Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Formal Shoes</a>
-                                                <a href="homepage" className="dropdown-item">iFFALCON by TCL</a>
-                                                <a href="homepage" className="dropdown-item">Sandals & Floaters</a>
-                                                <a href="homepage" className="dropdown-item">Flip- Flops</a>
-                                                <a href="homepage" className="dropdown-item">Loafers</a>
-                                                <a href="homepage" className="dropdown-item">Boots</a>
-                                                <a href="homepage" className="dropdown-item">Running Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Sneakers</a>
-                                                <h5 className="">Mens Grooming</h5>
-                                                <a href="homepage" className="dropdown-item">Deodrants</a>
-                                                <a href="homepage" className="dropdown-item">Perfumes</a>
-                                                <a href="homepage" className="dropdown-item">Beard Cares & Grooming</a>
-                                                <a href="homepage" className="dropdown-item">Shaving & Aftershave</a>
-                                                <a href="homepage" className="dropdown-item">Sexual Wellness</a>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Clothing</h5>
-                                                <h5>Top Wear</h5>
-                                                <a href="homepage" className="dropdown-item">T-Shirts</a>
-                                                <a href="homepage" className="dropdown-item">Formal Shirts</a>
-                                                <a href="homepage" className="dropdown-item">Casual Shirts</a>
-                                                <h5>Bottom wear</h5>
-                                                <a href="homepage" className="dropdown-item">Jeans</a>
-                                                <a href="homepage" className="dropdown-item">Casual Trausers</a>
-                                                <a href="homepage" className="dropdown-item">Formal Trousers</a>
-                                                <a href="homepage" className="dropdown-item">Track Pants</a>
-                                                <a href="homepage" className="dropdown-item">Shorts</a>
-                                                <a href="homepage" className="dropdown-item">Cargos</a>
-                                                <a href="homepage" className="dropdown-item">Three Fourths</a>
-                                                <h5>Suits,Blazzers & Waistcoats</h5>
-                                                <h5>Ties,Socks,Caps & More</h5>
-                                                <h5>Fabrics</h5>
-
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Winter Wear</h5>
-                                                <a href="homepage" className="dropdown-item">Sweetshirts</a>
-                                                <a href="homepage" className="dropdown-item">Jackets</a>
-                                                <a href="homepage" className="dropdown-item">Sweater</a>
-                                                <a href="homepage" className="dropdown-item">Tracksuits</a>
-                                                <h5>Ethinic Wear</h5>
-                                                <a href="homepage" className="dropdown-item">Kurta</a>
-                                                <a href="homepage" className="dropdown-item">Ethinic Sets</a>
-                                                <a href="homepage" className="dropdown-item">Dhoti</a>
-                                                <a href="homepage" className="dropdown-item">Lungi</a>
-                                                <h5>Innerwear & Loungewear</h5>
-                                                <a href="homepage" className="dropdown-item">Brief & Trunks</a>
-                                                <a href="homepage" className="dropdown-item">Vests</a>
-                                                <a href="homepage" className="dropdown-item">Boxers</a>
-                                                <a href="homepage" className="dropdown-item">Pyjamas and Lounge Pants</a>
-                                                <a href="homepage" className="dropdown-item">Thermals</a>
-                                                <a href="homepage" className="dropdown-item">Night Suits</a>
-                                                <h5>Raincoats & Windcheaters</h5>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Watches</h5>
-                                                <a href="homepage" className="dropdown-item">Fastrack</a>
-                                                <a href="homepage" className="dropdown-item">Casio</a>
-                                                <a href="homepage" className="dropdown-item">Titan</a>
-                                                <a href="homepage" className="dropdown-item">Fossil</a>
-                                                <a href="homepage" className="dropdown-item">Sonata</a>
-                                                <h5>Accessories</h5>
-                                                <a href="homepage" className="dropdown-item">Backpacks</a>
-                                                <a href="homepage" className="dropdown-item">Wallets</a>
-                                                <a href="homepage" className="dropdown-item">Belts</a>
-                                                <a href="homepage" className="dropdown-item">Sunglases</a>
-                                                <a href="homepage" className="dropdown-item">Luggage & Travel</a>
-                                                <a href="homepage" className="dropdown-item">Frames</a>
-                                                <a href="homepage" className="dropdown-item">Jewellery</a>
-                                                <h5>Sports & Fitness Store</h5>
-
-
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Smart Watches</h5>
-                                                <h5>Smart Bands</h5>
-                                                <h5>Personal Care Appliances</h5>
-                                                <a href="homepage" className="dropdown-item">Trimmers</a>
-                                                <a href="homepage" className="dropdown-item">Shavers</a>
-                                                <a href="homepage" className="dropdown-item">Grooming Kits</a>
-                                                <h5>Featured</h5>
-                                                <a href="homepage" className="dropdown-item">Watches Store</a>
-                                                <a href="homepage" className="dropdown-item">Footwear Club</a>
-                                                <a href="homepage" className="dropdown-item">Bags & Wallet</a>
-                                                <a href="homepage" className="dropdown-item">T-Shirt Store</a>
-                                                <a href="homepage" className="dropdown-item">Adidas</a>
-                                                <a href="homepage" className="dropdown-item">Beardo</a>
-                                                <a href="homepage" className="dropdown-item">Reebok</a>
-                                                <a href="homepage" className="dropdown-item">Skechers</a>
-                                                <a href="homepage" className="dropdown-item">Nike</a>
-                                                <a href="homepage" className="dropdown-item">LG Refrigerators</a>
-
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </li>
-                                <li className="nav-item dropdown menu-area">
-                                    <a className="nav-link dropdown-toggle " href="homepage" id="hover" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Women
-                        </a>
-
-                                    <div className="dropdown-menu mega-area" aria-labelledby="navbarDropdownMenuLink">
-
-                                        <div className="row justify-content-center">
-
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5 className="">Footwear</h5>
-
-                                                <a href="homepage" className="dropdown-item">Sports Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Casual Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Formal Shoes</a>
-                                                <a href="homepage" className="dropdown-item">iFFALCON by TCL</a>
-                                                <a href="homepage" className="dropdown-item">Sandals & Floaters</a>
-                                                <a href="homepage" className="dropdown-item">Flip- Flops</a>
-                                                <a href="homepage" className="dropdown-item">Loafers</a>
-                                                <a href="homepage" className="dropdown-item">Boots</a>
-                                                <a href="homepage" className="dropdown-item">Running Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Sneakers</a>
-                                                <h5 className="">Mens Grooming</h5>
-                                                <a href="homepage" className="dropdown-item">Deodrants</a>
-                                                <a href="homepage" className="dropdown-item">Perfumes</a>
-                                                <a href="homepage" className="dropdown-item">Beard Cares & Grooming</a>
-                                                <a href="homepage" className="dropdown-item">Shaving & Aftershave</a>
-                                                <a href="homepage" className="dropdown-item">Sexual Wellness</a>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Clothing</h5>
-                                                <h5>Top Wear</h5>
-                                                <a href="homepage" className="dropdown-item">T-Shirts</a>
-                                                <a href="homepage" className="dropdown-item">Formal Shirts</a>
-                                                <a href="homepage" className="dropdown-item">Casual Shirts</a>
-                                                <h5>Bottom wear</h5>
-                                                <a href="homepage" className="dropdown-item">Jeans</a>
-                                                <a href="homepage" className="dropdown-item">Casual Trausers</a>
-                                                <a href="homepage" className="dropdown-item">Formal Trousers</a>
-                                                <a href="homepage" className="dropdown-item">Track Pants</a>
-                                                <a href="homepage" className="dropdown-item">Shorts</a>
-                                                <a href="homepage" className="dropdown-item">Cargos</a>
-                                                <a href="homepage" className="dropdown-item">Three Fourths</a>
-                                                <h5>Suits,Blazzers & Waistcoats</h5>
-                                                <h5>Ties,Socks,Caps & More</h5>
-                                                <h5>Fabrics</h5>
-
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Winter Wear</h5>
-                                                <a href="homepage" className="dropdown-item">Sweetshirts</a>
-                                                <a href="homepage" className="dropdown-item">Jackets</a>
-                                                <a href="homepage" className="dropdown-item">Sweater</a>
-                                                <a href="homepage" className="dropdown-item">Tracksuits</a>
-                                                <h5>Ethinic Wear</h5>
-                                                <a href="homepage" className="dropdown-item">Kurta</a>
-                                                <a href="homepage" className="dropdown-item">Ethinic Sets</a>
-                                                <a href="homepage" className="dropdown-item">Dhoti</a>
-                                                <a href="homepage" className="dropdown-item">Lungi</a>
-                                                <h5>Innerwear & Loungewear</h5>
-                                                <a href="homepage" className="dropdown-item">Brief & Trunks</a>
-                                                <a href="homepage" className="dropdown-item">Vests</a>
-                                                <a href="homepage" className="dropdown-item">Boxers</a>
-                                                <a href="homepage" className="dropdown-item">Pyjamas and Lounge Pants</a>
-                                                <a href="homepage" className="dropdown-item">Thermals</a>
-                                                <a href="homepage" className="dropdown-item">Night Suits</a>
-                                                <h5>Raincoats & Windcheaters</h5>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Watches</h5>
-                                                <a href="homepage" className="dropdown-item">Fastrack</a>
-                                                <a href="homepage" className="dropdown-item">Casio</a>
-                                                <a href="homepage" className="dropdown-item">Titan</a>
-                                                <a href="homepage" className="dropdown-item">Fossil</a>
-                                                <a href="homepage" className="dropdown-item">Sonata</a>
-                                                <h5>Accessories</h5>
-                                                <a href="homepage" className="dropdown-item">Backpacks</a>
-                                                <a href="homepage" className="dropdown-item">Wallets</a>
-                                                <a href="homepage" className="dropdown-item">Belts</a>
-                                                <a href="homepage" className="dropdown-item">Sunglases</a>
-                                                <a href="homepage" className="dropdown-item">Luggage & Travel</a>
-                                                <a href="homepage" className="dropdown-item">Frames</a>
-                                                <a href="homepage" className="dropdown-item">Jewellery</a>
-                                                <h5>Sports & Fitness Store</h5>
-
-
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Smart Watches</h5>
-                                                <h5>Smart Bands</h5>
-                                                <h5>Personal Care Appliances</h5>
-                                                <a href="homepage" className="dropdown-item">Trimmers</a>
-                                                <a href="homepage" className="dropdown-item">Shavers</a>
-                                                <a href="homepage" className="dropdown-item">Grooming Kits</a>
-                                                <h5>Featured</h5>
-                                                <a href="homepage" className="dropdown-item">Watches Store</a>
-                                                <a href="homepage" className="dropdown-item">Footwear Club</a>
-                                                <a href="homepage" className="dropdown-item">Bags & Wallet</a>
-                                                <a href="homepage" className="dropdown-item">T-Shirt Store</a>
-                                                <a href="homepage" className="dropdown-item">Adidas</a>
-                                                <a href="homepage" className="dropdown-item">Beardo</a>
-                                                <a href="homepage" className="dropdown-item">Reebok</a>
-                                                <a href="homepage" className="dropdown-item">Skechers</a>
-                                                <a href="homepage" className="dropdown-item">Nike</a>
-                                                <a href="homepage" className="dropdown-item">LG Refrigerators</a>
-
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </li>
-                                <li className="nav-item dropdown menu-area">
-                                    <a className="nav-link dropdown-toggle " href="homepage" id="hover" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Baby & Kids
-                        </a>
-
-                                    <div className="dropdown-menu mega-area" aria-labelledby="navbarDropdownMenuLink">
-
-                                        <div className="row justify-content-center">
-
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5 className="">Footwear</h5>
-
-                                                <a href="homepage" className="dropdown-item">Sports Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Casual Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Formal Shoes</a>
-                                                <a href="homepage" className="dropdown-item">iFFALCON by TCL</a>
-                                                <a href="homepage" className="dropdown-item">Sandals & Floaters</a>
-                                                <a href="homepage" className="dropdown-item">Flip- Flops</a>
-                                                <a href="homepage" className="dropdown-item">Loafers</a>
-                                                <a href="homepage" className="dropdown-item">Boots</a>
-                                                <a href="homepage" className="dropdown-item">Running Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Sneakers</a>
-                                                <h5 className="">Mens Grooming</h5>
-                                                <a href="homepage" className="dropdown-item">Deodrants</a>
-                                                <a href="homepage" className="dropdown-item">Perfumes</a>
-                                                <a href="homepage" className="dropdown-item">Beard Cares & Grooming</a>
-                                                <a href="homepage" className="dropdown-item">Shaving & Aftershave</a>
-                                                <a href="homepage" className="dropdown-item">Sexual Wellness</a>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Clothing</h5>
-                                                <h5>Top Wear</h5>
-                                                <a href="homepage" className="dropdown-item">T-Shirts</a>
-                                                <a href="homepage" className="dropdown-item">Formal Shirts</a>
-                                                <a href="homepage" className="dropdown-item">Casual Shirts</a>
-                                                <h5>Bottom wear</h5>
-                                                <a href="homepage" className="dropdown-item">Jeans</a>
-                                                <a href="homepage" className="dropdown-item">Casual Trausers</a>
-                                                <a href="homepage" className="dropdown-item">Formal Trousers</a>
-                                                <a href="homepage" className="dropdown-item">Track Pants</a>
-                                                <a href="homepage" className="dropdown-item">Shorts</a>
-                                                <a href="homepage" className="dropdown-item">Cargos</a>
-                                                <a href="homepage" className="dropdown-item">Three Fourths</a>
-                                                <h5>Suits,Blazzers & Waistcoats</h5>
-                                                <h5>Ties,Socks,Caps & More</h5>
-                                                <h5>Fabrics</h5>
-
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Winter Wear</h5>
-                                                <a href="homepage" className="dropdown-item">Sweetshirts</a>
-                                                <a href="homepage" className="dropdown-item">Jackets</a>
-                                                <a href="homepage" className="dropdown-item">Sweater</a>
-                                                <a href="homepage" className="dropdown-item">Tracksuits</a>
-                                                <h5>Ethinic Wear</h5>
-                                                <a href="homepage" className="dropdown-item">Kurta</a>
-                                                <a href="homepage" className="dropdown-item">Ethinic Sets</a>
-                                                <a href="homepage" className="dropdown-item">Dhoti</a>
-                                                <a href="homepage" className="dropdown-item">Lungi</a>
-                                                <h5>Innerwear & Loungewear</h5>
-                                                <a href="homepage" className="dropdown-item">Brief & Trunks</a>
-                                                <a href="homepage" className="dropdown-item">Vests</a>
-                                                <a href="homepage" className="dropdown-item">Boxers</a>
-                                                <a href="homepage" className="dropdown-item">Pyjamas and Lounge Pants</a>
-                                                <a href="homepage" className="dropdown-item">Thermals</a>
-                                                <a href="homepage" className="dropdown-item">Night Suits</a>
-                                                <h5>Raincoats & Windcheaters</h5>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Watches</h5>
-                                                <a href="homepage" className="dropdown-item">Fastrack</a>
-                                                <a href="homepage" className="dropdown-item">Casio</a>
-                                                <a href="homepage" className="dropdown-item">Titan</a>
-                                                <a href="homepage" className="dropdown-item">Fossil</a>
-                                                <a href="homepage" className="dropdown-item">Sonata</a>
-                                                <h5>Accessories</h5>
-                                                <a href="homepage" className="dropdown-item">Backpacks</a>
-                                                <a href="homepage" className="dropdown-item">Wallets</a>
-                                                <a href="homepage" className="dropdown-item">Belts</a>
-                                                <a href="homepage" className="dropdown-item">Sunglases</a>
-                                                <a href="homepage" className="dropdown-item">Luggage & Travel</a>
-                                                <a href="homepage" className="dropdown-item">Frames</a>
-                                                <a href="homepage" className="dropdown-item">Jewellery</a>
-                                                <h5>Sports & Fitness Store</h5>
-
-
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Smart Watches</h5>
-                                                <h5>Smart Bands</h5>
-                                                <h5>Personal Care Appliances</h5>
-                                                <a href="homepage" className="dropdown-item">Trimmers</a>
-                                                <a href="homepage" className="dropdown-item">Shavers</a>
-                                                <a href="homepage" className="dropdown-item">Grooming Kits</a>
-                                                <h5>Featured</h5>
-                                                <a href="homepage" className="dropdown-item">Watches Store</a>
-                                                <a href="homepage" className="dropdown-item">Footwear Club</a>
-                                                <a href="homepage" className="dropdown-item">Bags & Wallet</a>
-                                                <a href="homepage" className="dropdown-item">T-Shirt Store</a>
-                                                <a href="homepage" className="dropdown-item">Adidas</a>
-                                                <a href="homepage" className="dropdown-item">Beardo</a>
-                                                <a href="homepage" className="dropdown-item">Reebok</a>
-                                                <a href="homepage" className="dropdown-item">Skechers</a>
-                                                <a href="homepage" className="dropdown-item">Nike</a>
-                                                <a href="homepage" className="dropdown-item">LG Refrigerators</a>
-
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </li>
-                                <li className="nav-item dropdown menu-area">
-                                    <a className="nav-link dropdown-toggle " href="homepage" id="hover" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Home & Furniture
-                        </a>
-
-                                    <div className="dropdown-menu mega-area" aria-labelledby="navbarDropdownMenuLink">
-
-                                        <div className="row justify-content-center">
-
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5 className="">Footwear</h5>
-
-                                                <a href="homepage" className="dropdown-item">Sports Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Casual Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Formal Shoes</a>
-                                                <a href="homepage" className="dropdown-item">iFFALCON by TCL</a>
-                                                <a href="homepage" className="dropdown-item">Sandals & Floaters</a>
-                                                <a href="homepage" className="dropdown-item">Flip- Flops</a>
-                                                <a href="homepage" className="dropdown-item">Loafers</a>
-                                                <a href="homepage" className="dropdown-item">Boots</a>
-                                                <a href="homepage" className="dropdown-item">Running Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Sneakers</a>
-                                                <h5 className="">Mens Grooming</h5>
-                                                <a href="homepage" className="dropdown-item">Deodrants</a>
-                                                <a href="homepage" className="dropdown-item">Perfumes</a>
-                                                <a href="homepage" className="dropdown-item">Beard Cares & Grooming</a>
-                                                <a href="homepage" className="dropdown-item">Shaving & Aftershave</a>
-                                                <a href="homepage" className="dropdown-item">Sexual Wellness</a>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Clothing</h5>
-                                                <h5>Top Wear</h5>
-                                                <a href="homepage" className="dropdown-item">T-Shirts</a>
-                                                <a href="homepage" className="dropdown-item">Formal Shirts</a>
-                                                <a href="homepage" className="dropdown-item">Casual Shirts</a>
-                                                <h5>Bottom wear</h5>
-                                                <a href="homepage" className="dropdown-item">Jeans</a>
-                                                <a href="homepage" className="dropdown-item">Casual Trausers</a>
-                                                <a href="homepage" className="dropdown-item">Formal Trousers</a>
-                                                <a href="homepage" className="dropdown-item">Track Pants</a>
-                                                <a href="homepage" className="dropdown-item">Shorts</a>
-                                                <a href="homepage" className="dropdown-item">Cargos</a>
-                                                <a href="homepage" className="dropdown-item">Three Fourths</a>
-                                                <h5>Suits,Blazzers & Waistcoats</h5>
-                                                <h5>Ties,Socks,Caps & More</h5>
-                                                <h5>Fabrics</h5>
-
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Winter Wear</h5>
-                                                <a href="homepage" className="dropdown-item">Sweetshirts</a>
-                                                <a href="homepage" className="dropdown-item">Jackets</a>
-                                                <a href="homepage" className="dropdown-item">Sweater</a>
-                                                <a href="homepage" className="dropdown-item">Tracksuits</a>
-                                                <h5>Ethinic Wear</h5>
-                                                <a href="homepage" className="dropdown-item">Kurta</a>
-                                                <a href="homepage" className="dropdown-item">Ethinic Sets</a>
-                                                <a href="homepage" className="dropdown-item">Dhoti</a>
-                                                <a href="homepage" className="dropdown-item">Lungi</a>
-                                                <h5>Innerwear & Loungewear</h5>
-                                                <a href="homepage" className="dropdown-item">Brief & Trunks</a>
-                                                <a href="homepage" className="dropdown-item">Vests</a>
-                                                <a href="homepage" className="dropdown-item">Boxers</a>
-                                                <a href="homepage" className="dropdown-item">Pyjamas and Lounge Pants</a>
-                                                <a href="homepage" className="dropdown-item">Thermals</a>
-                                                <a href="homepage" className="dropdown-item">Night Suits</a>
-                                                <h5>Raincoats & Windcheaters</h5>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Watches</h5>
-                                                <a href="homepage" className="dropdown-item">Fastrack</a>
-                                                <a href="homepage" className="dropdown-item">Casio</a>
-                                                <a href="homepage" className="dropdown-item">Titan</a>
-                                                <a href="homepage" className="dropdown-item">Fossil</a>
-                                                <a href="homepage" className="dropdown-item">Sonata</a>
-                                                <h5>Accessories</h5>
-                                                <a href="homepage" className="dropdown-item">Backpacks</a>
-                                                <a href="homepage" className="dropdown-item">Wallets</a>
-                                                <a href="homepage" className="dropdown-item">Belts</a>
-                                                <a href="homepage" className="dropdown-item">Sunglases</a>
-                                                <a href="homepage" className="dropdown-item">Luggage & Travel</a>
-                                                <a href="homepage" className="dropdown-item">Frames</a>
-                                                <a href="homepage" className="dropdown-item">Jewellery</a>
-                                                <h5>Sports & Fitness Store</h5>
-
-
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Smart Watches</h5>
-                                                <h5>Smart Bands</h5>
-                                                <h5>Personal Care Appliances</h5>
-                                                <a href="homepage" className="dropdown-item">Trimmers</a>
-                                                <a href="homepage" className="dropdown-item">Shavers</a>
-                                                <a href="homepage" className="dropdown-item">Grooming Kits</a>
-                                                <h5>Featured</h5>
-                                                <a href="homepage" className="dropdown-item">Watches Store</a>
-                                                <a href="homepage" className="dropdown-item">Footwear Club</a>
-                                                <a href="homepage" className="dropdown-item">Bags & Wallet</a>
-                                                <a href="homepage" className="dropdown-item">T-Shirt Store</a>
-                                                <a href="homepage" className="dropdown-item">Adidas</a>
-                                                <a href="homepage" className="dropdown-item">Beardo</a>
-                                                <a href="homepage" className="dropdown-item">Reebok</a>
-                                                <a href="homepage" className="dropdown-item">Skechers</a>
-                                                <a href="homepage" className="dropdown-item">Nike</a>
-                                                <a href="homepage" className="dropdown-item">LG Refrigerators</a>
-
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </li>
-                                <li className="nav-item dropdown menu-area">
-                                    <a className="nav-link dropdown-toggle " href="homepage" id="hover" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Sports,Books & More
-                        </a>
-
-                                    <div className="dropdown-menu mega-area" aria-labelledby="navbarDropdownMenuLink">
-
-                                        <div className="row justify-content-center">
-
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5 className="">Footwear</h5>
-
-                                                <a href="homepage" className="dropdown-item">Sports Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Casual Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Formal Shoes</a>
-                                                <a href="homepage" className="dropdown-item">iFFALCON by TCL</a>
-                                                <a href="homepage" className="dropdown-item">Sandals & Floaters</a>
-                                                <a href="homepage" className="dropdown-item">Flip- Flops</a>
-                                                <a href="homepage" className="dropdown-item">Loafers</a>
-                                                <a href="homepage" className="dropdown-item">Boots</a>
-                                                <a href="homepage" className="dropdown-item">Running Shoes</a>
-                                                <a href="homepage" className="dropdown-item">Sneakers</a>
-                                                <h5 className="">Mens Grooming</h5>
-                                                <a href="homepage" className="dropdown-item">Deodrants</a>
-                                                <a href="homepage" className="dropdown-item">Perfumes</a>
-                                                <a href="homepage" className="dropdown-item">Beard Cares & Grooming</a>
-                                                <a href="homepage" className="dropdown-item">Shaving & Aftershave</a>
-                                                <a href="homepage" className="dropdown-item">Sexual Wellness</a>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Clothing</h5>
-                                                <h5>Top Wear</h5>
-                                                <a href="homepage" className="dropdown-item">T-Shirts</a>
-                                                <a href="homepage" className="dropdown-item">Formal Shirts</a>
-                                                <a href="homepage" className="dropdown-item">Casual Shirts</a>
-                                                <h5>Bottom wear</h5>
-                                                <a href="homepage" className="dropdown-item">Jeans</a>
-                                                <a href="homepage" className="dropdown-item">Casual Trausers</a>
-                                                <a href="homepage" className="dropdown-item">Formal Trousers</a>
-                                                <a href="homepage" className="dropdown-item">Track Pants</a>
-                                                <a href="homepage" className="dropdown-item">Shorts</a>
-                                                <a href="homepage" className="dropdown-item">Cargos</a>
-                                                <a href="homepage" className="dropdown-item">Three Fourths</a>
-                                                <h5>Suits,Blazzers & Waistcoats</h5>
-                                                <h5>Ties,Socks,Caps & More</h5>
-                                                <h5>Fabrics</h5>
-
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Winter Wear</h5>
-                                                <a href="homepage" className="dropdown-item">Sweetshirts</a>
-                                                <a href="homepage" className="dropdown-item">Jackets</a>
-                                                <a href="homepage" className="dropdown-item">Sweater</a>
-                                                <a href="homepage" className="dropdown-item">Tracksuits</a>
-                                                <h5>Ethinic Wear</h5>
-                                                <a href="homepage" className="dropdown-item">Kurta</a>
-                                                <a href="homepage" className="dropdown-item">Ethinic Sets</a>
-                                                <a href="homepage" className="dropdown-item">Dhoti</a>
-                                                <a href="homepage" className="dropdown-item">Lungi</a>
-                                                <h5>Innerwear & Loungewear</h5>
-                                                <a href="homepage" className="dropdown-item">Brief & Trunks</a>
-                                                <a href="homepage" className="dropdown-item">Vests</a>
-                                                <a href="homepage" className="dropdown-item">Boxers</a>
-                                                <a href="homepage" className="dropdown-item">Pyjamas and Lounge Pants</a>
-                                                <a href="homepage" className="dropdown-item">Thermals</a>
-                                                <a href="homepage" className="dropdown-item">Night Suits</a>
-                                                <h5>Raincoats & Windcheaters</h5>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Watches</h5>
-                                                <a href="homepage" className="dropdown-item">Fastrack</a>
-                                                <a href="homepage" className="dropdown-item">Casio</a>
-                                                <a href="homepage" className="dropdown-item">Titan</a>
-                                                <a href="homepage" className="dropdown-item">Fossil</a>
-                                                <a href="homepage" className="dropdown-item">Sonata</a>
-                                                <h5>Accessories</h5>
-                                                <a href="homepage" className="dropdown-item">Backpacks</a>
-                                                <a href="homepage" className="dropdown-item">Wallets</a>
-                                                <a href="homepage" className="dropdown-item">Belts</a>
-                                                <a href="homepage" className="dropdown-item">Sunglases</a>
-                                                <a href="homepage" className="dropdown-item">Luggage & Travel</a>
-                                                <a href="homepage" className="dropdown-item">Frames</a>
-                                                <a href="homepage" className="dropdown-item">Jewellery</a>
-                                                <h5>Sports & Fitness Store</h5>
-                                            </div>
-                                            <div className="col-sm-6 col-lg-2">
-                                                <h5>Smart Watches</h5>
-                                                <h5>Smart Bands</h5>
-                                                <h5>Personal Care Appliances</h5>
-                                                <a href="homepage" className="dropdown-item">Trimmers</a>
-                                                <a href="homepage" className="dropdown-item">Shavers</a>
-                                                <a href="homepage" className="dropdown-item">Grooming Kits</a>
-                                                <h5>Featured</h5>
-                                                <a href="homepage" className="dropdown-item">Watches Store</a>
-                                                <a href="homepage" className="dropdown-item">Footwear Club</a>
-                                                <a href="homepage" className="dropdown-item">Bags & Wallet</a>
-                                                <a href="homepage" className="dropdown-item">T-Shirt Store</a>
-                                                <a href="homepage" className="dropdown-item">Adidas</a>
-                                                <a href="homepage" className="dropdown-item">Beardo</a>
-                                                <a href="homepage" className="dropdown-item">Reebok</a>
-                                                <a href="homepage" className="dropdown-item">Skechers</a>
-                                                <a href="homepage" className="dropdown-item">Nike</a>
-                                                <a href="homepage" className="dropdown-item">LG Refrigerators</a>
-
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </li>
-                                <li className="nav-item">
-                                    <a id="hover" className="nav-link" href="homepage">Flights</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a id="hover" className="nav-link" href="homepage">Offer Zone</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <SubNavbar />
 
                 {/* end of second navbar */}
 
-                <div className="container-fluid" style={{marginTop:"10px"}}>
+                <div className="container-fluid" style={{ marginTop: "10px" }}>
                     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active">
@@ -1075,7 +138,218 @@ export class Home extends Component {
 
                 <div className="container-fluid" style={{ marginTop: "15px", backgroundColor: "rgb(255,255,255)" }}>
                     <div className="row">
-                        <div className="col-md-9 col-sm-6 col-6">
+                        <div className="col-12">
+                            <div className="card">
+                                <div className="card-header fs-4 fw-bold">
+                                    Mobiles
+                                  </div>
+                            </div>
+                            <div id="slidebuttom" className="carousel slide" data-bs-ride="carousel" data-bs-animation="dragX">
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active">
+
+                                        <div className="row text-center">
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
+                                                        </p>
+                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={pocom2} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> POCCO M2 (Slate Blue,64 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.3*</span>(2,92,250)
+                                                        </p>
+                                                        <p>₹9,999 <span className="text-decoration-line-through text-secondary">₹12,999</span> 23% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={pocox3} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> POCO X3 (Cobalt Blue, 128 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.4*</span>(1,05,705)
+                                                        </p>
+                                                        <p>₹16,999 <span className="text-decoration-line-through text-secondary">₹19,999</span> 15% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={opporeno5} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> OPPO Reno5 Pro 5G (Astral Blue, 128 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.4*</span>(2,858)
+                                                        </p>
+                                                        <p>₹35,990 <span className="text-decoration-line-through text-secondary">₹38,990</span> 7% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
+                                                        </p>
+                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={realmenarzo20} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> Realme Narzo 20 (Glory Silver, 64 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.3*</span>(3,10,633)
+                                                        </p>
+                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,499</span> 19% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="carousel-item">
+                                        <div className="row text-center">
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
+                                                        </p>
+                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
+                                                        </p>
+                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
+                                                        </p>
+                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
+                                                        </p>
+                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
+                                                        </p>
+                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="card">
+                                                    <a>
+                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
+                                                    </a>
+                                                    <div className="card-body lh-1">
+                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
+                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
+                                                        </p>
+                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <a className="carousel-control-prev" id="slide" href="#slidebuttom" role="button" data-bs-slide="prev">
+                                    <span aria-hidden="true">
+                                        <i className="material-icons" style={{ fontSize: '46px', color: "black" }}>keyboard_arrow_left</i>
+                                    </span>
+                                    <span className="visually-hidden">Previous</span>
+                                </a>
+                                <a className="carousel-control-next" id="slide" href="#slidebuttom" role="button" data-bs-slide="next">
+                                    <span aria-hidden="true">
+                                        <i className="material-icons" style={{ fontSize: '46px', color: "black" }}>keyboard_arrow_right</i>
+                                    </span>
+                                    <span className="visually-hidden">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                {/* end of Mobiles */}
+
+
+                <div className="container-fluid" style={{ marginTop: "15px", backgroundColor: "rgb(255,255,255)" }}>
+                    <div className="row">
+                        <div className="col-md-9 col-sm-6">
                             <div className="card">
                                 <div className="card-header">
                                     <div className="d-flex justify-content-between flex-wrap">
@@ -1106,7 +380,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="  card-img-top  " src={crousel1img2}  alt="My Img" srcSet=""
+                                                    <img className="  card-img-top  " src={crousel1img2} alt="My Img" srcSet=""
                                                         style={{ height: "150px", width: "150px", marginTop: "20px", marginLeft: "10px" }} />
                                                     <div className="card-body">
                                                         <h5 className="card-title">Plain Case Covers & Screw</h5>
@@ -1118,7 +392,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="  card-img-top" src={crousel1img3}  alt="My Img" srcSet=""
+                                                    <img className="  card-img-top" src={crousel1img3} alt="My Img" srcSet=""
                                                         style={{ height: "150px", width: "150px", marginTop: "20px", marginLeft: "10px" }} />
                                                     <div className="card-body">
                                                         <h5 className="card-title">Christmas Essentials</h5>
@@ -1131,7 +405,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="card-img-top" src={crousel1img4}  alt="My Img" srcSet=""
+                                                    <img className="card-img-top" src={crousel1img4} alt="My Img" srcSet=""
                                                         style={{ height: "150px", width: "150px", marginTop: "20px", marginLeft: "10px" }} />
                                                     <div className="card-body">
                                                         <h5 className="card-title">Home Furnishing Range</h5>
@@ -1143,7 +417,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="card-img-top" src={crousel1img5}  alt="My Img" srcSet=""
+                                                    <img className="card-img-top" src={crousel1img5} alt="My Img" srcSet=""
                                                         style={{ height: "150px", width: "150px", marginTop: "20px", marginLeft: "10px" }} />
                                                     <div className="card-body">
                                                         <h5 className="card-title">Pendrives & Memory Card</h5>
@@ -1156,7 +430,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="card-img-top" src={crousel1img6}  alt="My Img" srcSet=""
+                                                    <img className="card-img-top" src={crousel1img6} alt="My Img" srcSet=""
                                                         style={{ height: "150px", width: "150px", marginTop: "20px", marginLeft: "10px" }} />
                                                     <div className="card-body">
                                                         <h5 className="card-title">LED Bulbs & more</h5>
@@ -1173,7 +447,7 @@ export class Home extends Component {
                                         <div className="row text-center">
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="card-img-top" src={crousel1img7}  alt="My Img" srcSet=""
+                                                    <img className="card-img-top" src={crousel1img7} alt="My Img" srcSet=""
                                                         style={{ height: "150px", width: "150px", marginTop: "20px", marginLeft: "10px" }} />
                                                     <div className="card-body">
                                                         <h5 className="card-title">LED Bulbs & more</h5>
@@ -1187,7 +461,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="card-img-top" src={crousel1img8}  alt="My Img" srcSet=""
+                                                    <img className="card-img-top" src={crousel1img8} alt="My Img" srcSet=""
                                                         style={{ height: "150px", width: "150px", marginTop: "20px", marginLeft: "10px" }} />
                                                     <div className="card-body">
                                                         <h5 className="card-title">LED Bulbs & more</h5>
@@ -1200,7 +474,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="card-img-top" src={crousel1img9}  alt="My Img" srcSet=""
+                                                    <img className="card-img-top" src={crousel1img9} alt="My Img" srcSet=""
                                                         style={{ height: "150px", width: "150px", marginTop: "20px", marginLeft: "10px" }} />
                                                     <div className="card-body">
                                                         <h5 className="card-title">Pendrives & Memory Card</h5>
@@ -1213,7 +487,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="card-img-top" src={crousel1img10}  alt="My Img" srcSet=""
+                                                    <img className="card-img-top" src={crousel1img10} alt="My Img" srcSet=""
                                                         style={{ height: "150px", width: "150px", marginTop: "20px", marginLeft: "10px" }} />
                                                     <div className="card-body">
                                                         <h5 className="card-title">Pendrives & Memory Card</h5>
@@ -1239,7 +513,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="  card-img-top  " src={crousel1img12}  alt="My Img" srcSet=""
+                                                    <img className="  card-img-top  " src={crousel1img12} alt="My Img" srcSet=""
                                                         style={{ height: "150px", width: "150px", marginTop: "20px", marginLeft: "10px" }} />
                                                     <div className="card-body">
                                                         <h5 className="card-title">Pendrives & Memory Card</h5>
@@ -1268,7 +542,7 @@ export class Home extends Component {
                                 </a>
                             </div>
                         </div>
-                        <div className="col-md-3 col-sm-6 col-6">
+                        <div className="col-md-3 col-sm-6 ">
                             <div className="card">
                                 <img className="card-img" src={sideimg1} alt="My Img" srcSet=""
                                     style={{ width: "350px", height: "380px" }} />
@@ -1293,12 +567,12 @@ export class Home extends Component {
                         </div>
                         <div className="col-4">
                             <div className="card">
-                                <img className="card-img" style={{ height: "260px" }} src={card2}  alt="My Img" srcSet="" />
+                                <img className="card-img" style={{ height: "260px" }} src={card2} alt="My Img" srcSet="" />
                             </div>
                         </div>
                         <div className="col-4">
                             <div className="card">
-                                <img className="card-img" style={{ height: "260px" }} src={card3}  alt="My Img" srcSet="" />
+                                <img className="card-img" style={{ height: "260px" }} src={card3} alt="My Img" srcSet="" />
                             </div>
                         </div>
                     </div>
@@ -1516,12 +790,6 @@ export class Home extends Component {
                                 </a>
                             </div>
                         </div>
-
-
-
-
-
-
                     </div>
                 </div>
 
@@ -1758,7 +1026,7 @@ export class Home extends Component {
 
 
                     </div>
-                </div>
+                </div >
 
                 {/* end of 4th carousel */}
 
@@ -1769,7 +1037,7 @@ export class Home extends Component {
                                 <div className="card-header ">
                                     <h5 className="card-title fs-4 fw-bold ">Furniture Bestsellers</h5>
                                     <h6 className="card-subtitle mb-2 text-muted">From $199</h6>
-                                    <span className="btn btn-primary float-end " style={{marginTop:'-50px'}}> View ALL</span>
+                                    <span className="btn btn-primary float-end " style={{ marginTop: '-50px' }}> View ALL</span>
                                 </div>
                             </div>
                             <div id="crousel5" className="carousel slide" data-bs-ride="carousel" data-bs-animation="dragX">
@@ -1779,7 +1047,7 @@ export class Home extends Component {
                                         <div className="row text-center">
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                <img className="card-img-top" id="Cardimg" src={crousel4img1} alt="My Img" srcSet=""
+                                                    <img className="card-img-top" id="Cardimg" src={crousel4img1} alt="My Img" srcSet=""
                                                     />
                                                     <div className="card-body lh-1">
                                                         <h5 className="card-title">Aquarium Tank</h5>
@@ -1794,7 +1062,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img2}  alt="My Img" srcSet=""
+                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img2} alt="My Img" srcSet=""
                                                     />
                                                     <div className="card-body lh-1">
                                                         <h5 className="card-title">Hammock And Swings</h5>
@@ -1808,7 +1076,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img3}  alt="My Img" srcSet=""
+                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img3} alt="My Img" srcSet=""
                                                     />
                                                     <div className="card-body lh-1">
                                                         <h5 className="card-title">Stools</h5>
@@ -1822,7 +1090,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img4}  alt="My Img" srcSet=""
+                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img4} alt="My Img" srcSet=""
                                                     />
                                                     <div className="card-body lh-1">
                                                         <h5 className="card-title">Inflatable Sofas</h5>
@@ -1837,7 +1105,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img5}  alt="My Img" srcSet=""
+                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img5} alt="My Img" srcSet=""
                                                     />
                                                     <div className="card-body lh-1">
                                                         <h5 className="card-title">Recliner</h5>
@@ -1852,7 +1120,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img6}  alt="My Img" srcSet=""
+                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img6} alt="My Img" srcSet=""
                                                     />
                                                     <div className="card-body lh-1">
                                                         <h5 className="card-title">Swings</h5>
@@ -1871,7 +1139,7 @@ export class Home extends Component {
                                         <div className="row text-center">
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img7}  alt="My Img" srcSet=""
+                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img7} alt="My Img" srcSet=""
                                                     />
                                                     <div className="card-body lh-1">
                                                         <h5 className="card-title">Cabinet And Drawer</h5>
@@ -1885,7 +1153,7 @@ export class Home extends Component {
                                             </div>
                                             <div className="col-sm-2">
                                                 <div className="card">
-                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img8}  alt="My Img" srcSet=""
+                                                    <img className="  card-img-top" id="Cardimg" src={crousel4img8} alt="My Img" srcSet=""
                                                     />
                                                     <div className="card-body lh-1">
                                                         <h5 className="card-title">Shoe Racks</h5>
@@ -1979,7 +1247,7 @@ export class Home extends Component {
 
 
                     </div>
-                </div>
+                </div >
 
                 {/* end of 5th carousel */}
 
@@ -2450,10 +1718,10 @@ export class Home extends Component {
 
                         </div>
                     </div>
-                </div>
+                </div >
 
                 {/* end of footer sub-footer  */}
-                <div className="container-fluid">
+                <div className="container-fluid" >
 
                     <div className="card-body bg-dark text-white d-flex justify-content-around flex-wrap">
                         <div>
@@ -2520,7 +1788,7 @@ export class Home extends Component {
                             </ul>
                         </div>
                     </div>
-                    <div className="card-footer d-flex justify-content-around flex-wrap" style={{backgroundColor:'Black'}}>
+                    <div className="card-footer d-flex justify-content-around flex-wrap" style={{ backgroundColor: 'Black' }}>
                         <div style={{ color: "white", listStyleType: 'none', fontSize: "14px" }}>
 
                             <i style={{ fontSize: '20px', color: 'sandybrown' }} className='fas'>&#xf290;</i>
@@ -2547,7 +1815,7 @@ export class Home extends Component {
                             © 2007-2020 Flipkart.com
 
             </div>
-                        <div style={{color: 'white',listStyleType: "none"}}>
+                        <div style={{ color: 'white', listStyleType: "none" }}>
 
                             <i style={{ fontSize: '25px' }} className='fab'>&#xf1f0;</i>
                             <i style={{ fontSize: '25px' }} className='fab'>&#xf1f1;</i>
@@ -2570,4 +1838,6 @@ export class Home extends Component {
     }
 }
 
-export default Home
+
+
+export default Home 
