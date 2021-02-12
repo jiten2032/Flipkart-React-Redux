@@ -10,6 +10,7 @@ import mi10t from '../IMAGES/mi10t.jpeg';
 
 
 
+
 const initstate = {
     Mobiles:
 
@@ -30,7 +31,7 @@ const initstate = {
                 DiscountPercentage: '22% off',
                 Offer: 'Exchange,100%Money Back',
                 EMI: 'No Cost EMI',
-                img:  pococ3 
+                img: pococ3
 
             },
             {
@@ -47,10 +48,9 @@ const initstate = {
                 Price: 9499,
                 DiscountPrice: '₹12,999',
                 DiscountPercentage: '23% off',
-
                 Offer: 'Exchange,100%Money Back',
                 EMI: 'No Cost EMI',
-                img:  pocom2 
+                img: pocom2
 
             },
 
@@ -70,7 +70,7 @@ const initstate = {
                 DiscountPercentage: '₹14% off',
                 EMI: 'No Cost EMI',
                 Offer: 'Upto ₹16,500 Off on Exchange',
-                img:  pocox3 
+                img: pocox3
             },
 
 
@@ -88,10 +88,9 @@ const initstate = {
                 Price: 18999,
                 DiscountPrice: '₹20,999 ',
                 DiscountPercentage: '14% off',
-
                 EMI: 'No Cost EMI',
                 Offer: 'Upto ₹16,500 Off on Exchange',
-                img:  opporeno5 
+                img: opporeno5
             },
             {
                 id: 5,
@@ -104,12 +103,12 @@ const initstate = {
                 Battery: '6000 mAh Lithium-ion Battery',
                 Processors: 'Exynos 9611 Processor',
                 Yarenty: '1 Year on Handset including Battery and 6 Months on Accessories',
-                Price: 10499,
+                Price: 11999,
                 DiscountPrice: '₹16499',
                 DiscountPercentage: '19% off',
                 Offer: 'Exchange,100%Money',
                 EMI: 'No Cost EMI',
-                img:  realmenarzo20 
+                img: realmenarzo20
             },
             {
                 id: 6,
@@ -127,7 +126,7 @@ const initstate = {
                 DiscountPercentage: '19% off',
                 Offer: 'Exchange,100%Money',
                 EMI: 'No Cost EMI',
-                img:  samsunggalaxym31 
+                img: samsunggalaxym31
             },
             {
                 id: 7,
@@ -145,7 +144,7 @@ const initstate = {
                 DiscountPercentage: '19% off',
                 Offer: 'Exchange,100%Money',
                 EMI: 'No Cost EMI',
-                img:  samsunggalaxyf41 
+                img: samsunggalaxyf41
             },
             {
                 id: 8,
@@ -161,10 +160,9 @@ const initstate = {
                 Price: 34999,
                 DiscountPrice: '₹42,999',
                 DiscountPercentage: '18% off',
-
                 Offer: 'Exchange,100%Money',
                 EMI: 'No Cost EMI',
-                img:  mi10t 
+                img: mi10t
             }
 
         ]
@@ -172,38 +170,32 @@ const initstate = {
 
 
 const RootReducer = (state = initstate, action) => {
-    // console.log(action);
+    //  console.log(action);
     switch (action.type) {
         case "SHOWPOPULARITY_MOBILES":
-
-            let data = state.Mobiles.filter(star => star.Stars >= 4);
-
             return {
+                Mobiles: state.Mobiles.filter(star => star.Stars >= 4)
+            }
 
-                Mobiles: data
-            };
         case "SHOWPRICEHIGHTOLOW_MOBILES":
-            let priceHightoLow = state.Mobiles.sort((a, b) => (a.Price > b.Price) ? -1 : 1)
+            let Pricehightolow = state.Mobiles.sort((a, b) => (a.Price > b.Price) ? -1 : 1) ;
+            // console.log(Pricehightolow);
 
-            console.log(priceHightoLow);
-           
             return {
-            
-                Mobiles: priceHightoLow 
-            };
 
-
+                Mobiles:Pricehightolow 
+                
+            }
+         
 
         case "SHOWPRICELOWTOHIGH_MOBILES":
-            let Pricelowtohigh = state.Mobiles.sort((a, b) => (a.Price > b.Price) ? 1 : -1)
-            return {
-                Mobiles:Pricelowtohigh
-            };
 
-        default:
-            return {
-                ...state
-            };
+           return {
+                Mobiles: state.Mobiles.sort((a, b) => (a.Price > b.Price) ? 1 : -1)
+            }
+
     }
+
+    return state;
 }
 export default RootReducer;

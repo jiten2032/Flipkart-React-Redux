@@ -8,23 +8,23 @@ import fAssured from '../IMAGES/fAssured.png'
 
 export class Mobiles extends Component {
     render() {
-        // console.log(this.props);
-        const { Mobiles } = this.props;
         console.log(this.props);
-        let DisplayMobiles = Mobiles.length ? (
-            Mobiles.map(Mobile => {
+        const { MyMobiles } = this.props;
+
+        let DisplayMobiles = MyMobiles ? (
+            MyMobiles.map(Mobile => {
 
                 return (
                     <div className="" key={Mobile.id}>
                         <li className="list-group-item">
-                            <div class="row g-0"  >
-                                <div class="col-md-3">
-                                    <img src={Mobile.img} alt="mobile img" />
-                                    <div class="form-check">
+                            <div class="row g-0 my-3">
+                                <div class="col-md-3 ">
+                                    <img src={Mobile.img} alt="mobile img" height="150px" width="100px" className="img-fluid d-block mx-auto" />
+                                    <div class="form-check mt-4">
                                         <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                         <label className="form-check-label" htmlFor="flexCheckDefault">
                                             Add to Compare
-                               </label>
+                                        </label>
                                     </div>
                                 </div>
                                 <div className="col-md-5">
@@ -156,10 +156,7 @@ export class Mobiles extends Component {
                                             </li>
                                         </ul>
                                     </li>
-
                                     {DisplayMobiles}
-
-
 
                                 </ul>
                             </div>
@@ -173,27 +170,32 @@ export class Mobiles extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        Mobiles: state.Mobiles
+        MyMobiles: state.Mobiles
     }
 }
 const mapDispatchToProps = (dispatch) => {
     // let data = ownProps
+
+
+
+
+
     return {
-        ShowPopularity: () => {
-            dispatch({
-                type: 'SHOWPOPULARITY_MOBILES',
-            })
-        },
+        // ShowPopularity: () => {
+        //     dispatch({
+        //         type: 'SHOWPOPULARITY_MOBILES'
+        //     })
+        // },
         ShowPriceHightoLow: () => {
             dispatch({
-                type: 'SHOWPRICEHIGHTOLOW_MOBILES',
-            })
-        },
-        ShowPriceLowtoHigh: () => {
-            dispatch({
-                type: 'SHOWPRICELOWTOHIGH_MOBILES',
+                type: 'SHOWPRICEHIGHTOLOW_MOBILES'
             })
         }
+        // ShowPriceLowtoHigh: () => {
+        //     dispatch({
+        //         type: 'SHOWPRICELOWTOHIGH_MOBILES'
+        //     })
+        // }
     }
 
 }
