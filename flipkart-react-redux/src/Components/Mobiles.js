@@ -8,62 +8,67 @@ import fAssured from '../IMAGES/fAssured.png'
 
 export class Mobiles extends Component {
     render() {
-        console.log(this.props);
+        // console.log(this.props);
         const { Mobiles } = this.props;
+        console.log(this.props);
         let DisplayMobiles = Mobiles.length ? (
             Mobiles.map(Mobile => {
+
                 return (
-
-                    <div class="row g-0" key={Mobile.id}>
-                        <div class="col-md-3">
-                            <img src={Mobile.img} alt="mobile img" />
-                            <div class="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label className="form-check-label" htmlFor="flexCheckDefault">
-                                    Add to Compare
+                    <div className="" key={Mobile.id}>
+                        <li className="list-group-item">
+                            <div class="row g-0"  >
+                                <div class="col-md-3">
+                                    <img src={Mobile.img} alt="mobile img" />
+                                    <div class="form-check">
+                                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                        <label className="form-check-label" htmlFor="flexCheckDefault">
+                                            Add to Compare
                                </label>
+                                    </div>
+                                </div>
+                                <div className="col-md-5">
+                                    <div class="card-body">
+                                        <Link to={'/' + Mobile.id} className="text-dark text-decoration-none">
+
+                                            <h4 className="card-title ">
+                                                {Mobile.Name}</h4>
+                                        </Link>
+                                        <h5 className="card-subtitle"><a>
+                                            <span className="badge bg-success px-3 ">{Mobile.Stars}</span>  {Mobile.Ratings}
+                                        </a></h5>
+                                        <p className="card-text my-3">
+
+                                            <ul className="lh-base">
+                                                <li>{Mobile.RAM}</li>
+                                                <li>{Mobile.Display}</li>
+                                                <li>{Mobile.Camera}</li>
+                                                <li>{Mobile.Battery}</li>
+                                                <li>{Mobile.Processors}</li>
+                                                <li>{Mobile.Yarenty}</li>
+
+                                            </ul>
+
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div className="col-md-4">
+                                    <div className="card-body">
+                                        <h4 className="card-title">₹{Mobile.Price}  <span> <img src={fAssured} alt="f-assured" width="80px" className="img-fluid" />
+                                        </span></h4>
+
+                                        <h5 className="card-subtitle lh-base"><span className="text-decoration-line-through text-secondary">{Mobile.DiscountPrice}</span>
+                                            {Mobile.DiscountPercentage}                            </h5>
+
+                                        <p className="card-subtitle lh-base"> {Mobile.EMI}</p>
+                                        <p className="card-subtitle lh-base">{Mobile.Offer}</p>
+
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-                        <div className="col-md-5">
-                            <div class="card-body">
-                                <Link to={'/' + Mobile.id} className="text-dark text-decoration-none">
-
-                                    <h4 className="card-title ">
-                                        {Mobile.Name}</h4>
-                                </Link>
-                                <h5 className="card-subtitle"><a>
-                                    <span className="badge bg-success px-3 ">{Mobile.Stars}</span>  {Mobile.Ratings}
-                                </a></h5>
-                                <p className="card-text my-3">
-
-                                    <ul className="lh-base">
-                                        <li>{Mobile.RAM}</li>
-                                        <li>{Mobile.Display}</li>
-                                        <li>{Mobile.Camera}</li>
-                                        <li>{Mobile.Battery}</li>
-                                        <li>{Mobile.Processors}</li>
-                                        <li>{Mobile.Yarenty}</li>
-
-                                    </ul>
-
-                                </p>
-
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="card-body">
-                                <h4 className="card-title">₹{Mobile.Price}  <span> <img src={fAssured} alt="f-assured" width="80px" className="img-fluid" />
-                                </span></h4>
-
-                                <h5 className="card-subtitle lh-base"><span className="text-decoration-line-through text-secondary">{Mobile.DiscountPrice}</span>
-                                    {Mobile.DiscountPercentage}                            </h5>
-
-                                <p className="card-subtitle lh-base"> {Mobile.EMI}</p>
-                                <p className="card-subtitle lh-base">{Mobile.Offer}</p>
-
-                            </div>
-                        </div>
-
+                        </li>
                     </div>
                 )
             })
@@ -140,20 +145,21 @@ export class Mobiles extends Component {
                                             <li className="list-inline-item">
                                                 Sort By :
                                             </li>
-                                            <li class="list-inline-item">
+                                            <li className="list-inline-item">
                                                 <button type="button" onClick={() => this.props.ShowPopularity()} className="btn btn-link text-decoration-none">Popularity</button>
                                             </li>
-                                            <li class="list-inline-item">
+                                            <li className="list-inline-item">
                                                 <button type="button" onClick={() => this.props.ShowPriceHightoLow()} className="btn btn-link text-decoration-none">Price - high to low</button>
                                             </li>
-                                            <li class="list-inline-item">
+                                            <li className="list-inline-item">
                                                 <button type="button" onClick={() => this.props.ShowPriceLowtoHigh()} className="btn btn-link text-decoration-none">Price - low to high</button>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className="list-group-item">
-                                        {DisplayMobiles}
-                                    </li>
+
+                                    {DisplayMobiles}
+
+
 
                                 </ul>
                             </div>
@@ -175,17 +181,17 @@ const mapDispatchToProps = (dispatch) => {
     return {
         ShowPopularity: () => {
             dispatch({
-                type: 'SHOWPOPULARITY_MOBILES', 
+                type: 'SHOWPOPULARITY_MOBILES',
             })
         },
         ShowPriceHightoLow: () => {
             dispatch({
-                type: 'SHOWPRICEHIGHTOLOW_MOBILES', 
+                type: 'SHOWPRICEHIGHTOLOW_MOBILES',
             })
         },
         ShowPriceLowtoHigh: () => {
             dispatch({
-                type: 'SHOWPRICELOWTOHIGH_MOBILES', 
+                type: 'SHOWPRICELOWTOHIGH_MOBILES',
             })
         }
     }
