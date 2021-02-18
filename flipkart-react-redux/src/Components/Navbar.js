@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import logo from '../IMAGES/logo.JPG';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export class Navbar extends Component {
     render() {
+        const { propsdata } = this.props
+        console.log(propsdata.length);
         return (
             <div className="">
-             <div className="navbar navbar-expand-md navbar-dark bg-primary sticky-top" >
+                <div className="navbar navbar-expand-md navbar-dark bg-primary sticky-top" >
                     <div className="container">
                         <div className="container d-flex">
 
@@ -37,7 +39,7 @@ export class Navbar extends Component {
                                 <li class="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="LINKS" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Jiten
-                                     </a>                       
+                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li>
                                             <a className="dropdown-item" href="HOMEPAGELINK" style={{ textDecoration: 'none', color: "dimgrey" }}>
@@ -106,13 +108,6 @@ export class Navbar extends Component {
                                     <a className="nav-link dropdown-toggle" href="LINKS" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         More
                                       </a>
-
-                                    {/* <div className="dropdown "> */}
-                                    {/* <a className="btn btn-link dropdown-toggle text-white fw-bolder" href="homepage" role="button"
-                                        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
-                                        style={{ textDecoration: 'none', fontSize: "large" }}>
-                                        More
-                                      </a> */}
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown1">
                                         <li>
                                             <a className="dropdown-item" href="homepage"
@@ -148,35 +143,27 @@ export class Navbar extends Component {
                                         </li>
                                     </ul>
                                 </li>
-                                {/* <div className="fw-bolder"> */}
-
                                 <li className="nav-item">
                                     <Link to="/Addproduct" className="nav-link" >Add Products</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/Orders" className="nav-link">Orders</Link>
                                 </li>
-                                <li className="nav-item">
+                                <li className="nav-item" style={{ position: 'relative' }}>
                                     <Link to="/Cart" className="nav-link">
-                                        <i className="material-icons">add_shopping_cart</i>Cart</Link>
+                                        <i className="material-icons">add_shopping_cart </i>
+                                        <span className="badge rounded-pill bg-danger"
+                                            style={{ position: 'absolute', bottom: '35px', left: '10px' }}>{this.props.propsdata.length}</span>
 
-
+                                        Cart</Link>
                                 </li>
                             </ul>
-
-                            {/* <div className="d-flex" style={{ marginTop: '10px', fontSize: "large" }}> */}
-                            {/* <div><a href="HOMEAGELINK" style={{ color: "white", textDecoration: 'none' }}>Add Products</a></div> */}
-                            {/* <div><a href="HOMEAGELINK" style={{ color: "white", textDecoration: 'none' }}> Orders</a></div> */}
-
-                            {/* <div><a href="HOMEAGELINK" style={{ color: "white" }}><i
-                                                className="material-icons">add_shopping_cart</i></a></div> */}
-                            {/* <div><a href="HOMEAGELINK" style={{ color: 'white', textDecoration: "none" }}> Cart</a></div> */}
 
                         </div>
                     </div>
 
                 </div>
-                  
+
             </div>
         )
     }

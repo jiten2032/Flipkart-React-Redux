@@ -70,24 +70,62 @@ import crousel5img10 from '../IMAGES/crousel5img10.jpeg';
 import crousel5img11 from '../IMAGES/crousel5img11.jpeg';
 import crousel5img12 from '../IMAGES/crousel5img12.jpeg';
 import sideimg1 from '../IMAGES/sideimg1.jpeg';
-import pococ3 from '../IMAGES/pococ3.jpeg';
-import pocom2 from '../IMAGES/pocom2.jpeg';
-import pocox3 from '../IMAGES/pocox3.jpeg';
-import opporeno5 from '../IMAGES/opporeno5.jpeg';
-import realmenarzo20 from '../IMAGES/realmenarzo20.jpeg';
-
+// import pococ3 from '../IMAGES/pococ3.jpeg';
+// import pocom2 from '../IMAGES/pocom2.jpeg';
+// import pocox3 from '../IMAGES/pocox3.jpeg';
+// import opporeno5 from '../IMAGES/opporeno5.jpeg';
+// import realmenarzo20 from '../IMAGES/realmenarzo20.jpeg';
+import { connect } from 'react-redux';
+// import { Mobile } from './Mobile';
 
 
 
 
 export class Home extends Component {
+    state = {
+        MobileData: []
+    }
+
+    handleClick = (id) => {
+        const mydata = this.props.MyMobiles.find(data => data.id == id)
+        // console.log(mydata);
+        this.setState({
+            MobileData: mydata
+        })
+
+
+    }
 
     render() {
+        // console.log(this.state);
+        // console.log(this.props);
+        const { MyMobiles } = this.props;
+        const Showmobiles = MyMobiles.slice(0, 6);
+        const displaymobiles = Showmobiles.map(mobiles => {
+            return (
 
+                <div className="col-sm-2" key={mobiles.id}>
+                    <div className="card">
+                        <a>
+                            <img className="card-img-top" id="Cardimg" src={mobiles.img} alt="My Img" srcSet="" />
+                        </a>
+                        <div className="card-body lh-1">
+                            <h5 className="card-title"><a> {mobiles.Name}</a> </h5>
+                            <p className=""><span className="badge bg-success">{mobiles.Stars}*</span>
+                                {mobiles.Ratings}        </p>
+                            <p>₹{mobiles.Price} <span className="text-decoration-line-through text-secondary">{mobiles.DiscountPrice}</span> {mobiles.DiscountPercentage}</p>
+                            <a className="btn btn-success" onClick={() => { this.handleClick(mobiles.id) }}>Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            )
+        })
+
+        const { MobileData } = this.state
         return (
             <div className="flipkart">
 
-                <Navbar />
+                <Navbar propsdata = { MobileData }  />
                 {/* End of Navbar */}
 
                 <SubNavbar />
@@ -136,216 +174,31 @@ export class Home extends Component {
 
                 {/* end of 1st carousel*/}
 
-                <div className="container-fluid" style={{ marginTop: "15px", backgroundColor: "rgb(255,255,255)" }}>
+                <div className="container-fluid" style={{ marginTop: "15px", backgroundColor: "rgb(255,255,255)" }} >
                     <div className="row">
                         <div className="col-12">
                             <div className="card">
                                 <div className="card-header fs-4 fw-bold">
                                     Mobiles
-                                  </div>
+                          </div>
                             </div>
                             <div id="slidebuttom" className="carousel slide" data-bs-ride="carousel" data-bs-animation="dragX">
                                 <div className="carousel-inner">
                                     <div className="carousel-item active">
 
                                         <div className="row text-center">
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
-                                                        </p>
-                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={pocom2} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> POCCO M2 (Slate Blue,64 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.3*</span>(2,92,250)
-                                                        </p>
-                                                        <p>₹9,999 <span className="text-decoration-line-through text-secondary">₹12,999</span> 23% off</p>
+                                            {displaymobiles}
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={pocox3} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> POCO X3 (Cobalt Blue, 128 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.4*</span>(1,05,705)
-                                                        </p>
-                                                        <p>₹16,999 <span className="text-decoration-line-through text-secondary">₹19,999</span> 15% off</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={opporeno5} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> OPPO Reno5 Pro 5G (Astral Blue, 128 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.4*</span>(2,858)
-                                                        </p>
-                                                        <p>₹35,990 <span className="text-decoration-line-through text-secondary">₹38,990</span> 7% off</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
-                                                        </p>
-                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={realmenarzo20} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> Realme Narzo 20 (Glory Silver, 64 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.3*</span>(3,10,633)
-                                                        </p>
-                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,499</span> 19% off</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
-                                    <div className="carousel-item">
-                                        <div className="row text-center">
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
-                                                        </p>
-                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
-                                                        </p>
-                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
-                                                        </p>
-                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
-                                                        </p>
-                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
-                                                        </p>
-                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-2">
-                                                <div className="card">
-                                                    <a>
-                                                        <img className="card-img-top" id="Cardimg" src={pococ3} alt="My Img" srcSet="" />
-                                                    </a>
-                                                    <div className="card-body lh-1">
-                                                        <h5 className="card-title"><a> POCCO C3 (Arctic Blue,64 GB)</a> </h5>
-                                                        <p className=""><span className="badge bg-success">4.3*</span>(1,01,826)
-                                                        </p>
-                                                        <p>₹8,499 <span className="text-decoration-line-through text-secondary">₹10,999</span> 22% off</p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
-                                <a className="carousel-control-prev" id="slide" href="#slidebuttom" role="button" data-bs-slide="prev">
-                                    <span aria-hidden="true">
-                                        <i className="material-icons" style={{ fontSize: '46px', color: "black" }}>keyboard_arrow_left</i>
-                                    </span>
-                                    <span className="visually-hidden">Previous</span>
-                                </a>
-                                <a className="carousel-control-next" id="slide" href="#slidebuttom" role="button" data-bs-slide="next">
-                                    <span aria-hidden="true">
-                                        <i className="material-icons" style={{ fontSize: '46px', color: "black" }}>keyboard_arrow_right</i>
-                                    </span>
-                                    <span className="visually-hidden">Next</span>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-
                 {/* end of Mobiles */}
-
 
                 <div className="container-fluid" style={{ marginTop: "15px", backgroundColor: "rgb(255,255,255)" }}>
                     <div className="row">
@@ -1019,14 +872,8 @@ export class Home extends Component {
                                 </a>
                             </div>
                         </div>
-
-
-
-
-
-
                     </div>
-                </div >
+                </div>
 
                 {/* end of 4th carousel */}
 
@@ -1240,17 +1087,10 @@ export class Home extends Component {
                                 </a>
                             </div>
                         </div>
-
-
-
-
-
-
                     </div>
-                </div >
+                </div>
 
                 {/* end of 5th carousel */}
-
 
                 <div className="container-fluid" style={{ marginTop: "15px", backgroundColor: "rgb(255,255,255)" }}>
                     <div className="row">
@@ -1440,7 +1280,6 @@ export class Home extends Component {
                         </div>
                     </div>
                 </div>
-
 
                 {/* end of 6th carousel  */}
 
@@ -1718,7 +1557,7 @@ export class Home extends Component {
 
                         </div>
                     </div>
-                </div >
+                </div>
 
                 {/* end of footer sub-footer  */}
                 <div className="container-fluid" >
@@ -1837,7 +1676,11 @@ export class Home extends Component {
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        MyMobiles: state.Mobiles
+    }
+}
 
 
-
-export default Home 
+export default connect(mapStateToProps)(Home)

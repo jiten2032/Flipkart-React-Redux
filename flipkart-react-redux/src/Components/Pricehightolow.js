@@ -6,14 +6,13 @@ import { Link } from 'react-router-dom';
 
 import fAssured from '../IMAGES/fAssured.png'
 
-export class Mobiles extends Component {
+export class Pricehightolow extends Component {
     render() {
-        // console.log(this.props);
-        const { MyMobiles } = this.props;
-
-        let DisplayMobiles = MyMobiles.length ? (
-            MyMobiles.map(Mobile => {
-
+        const { AscMobiles } = this.props;
+        let Pricehightolow = AscMobiles.sort((a, b) => (a.Price > b.Price) ? -1 : 1);
+        // console.log(Pricehightolow );
+        let SortedMobiles = Pricehightolow ? (
+            Pricehightolow.map(Mobile => {
                 return (
                     <div className="" key={Mobile.id}>
                         <li className="list-group-item">
@@ -24,7 +23,7 @@ export class Mobiles extends Component {
                                         <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                         <label className="form-check-label" htmlFor="flexCheckDefault">
                                             Add to Compare
-                                        </label>
+                                </label>
                                     </div>
                                 </div>
                                 <div className="col-md-5">
@@ -71,13 +70,18 @@ export class Mobiles extends Component {
                         </li>
                     </div>
                 )
+
+
             })
+
+
+
         ) : (
 
-                <div className="text-center text-success"> Your data is fetching</div>
 
+
+                <div className="text-center text-success"> Fething your sorted items</div>
             )
-
 
         return (
             <div className="Mobiles">
@@ -100,7 +104,7 @@ export class Mobiles extends Component {
                                                 <h2 className="accordion-header" id="headingOne">
                                                     <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                         RAM
-                                                    </button>
+                                                </button>
                                                 </h2>
                                                 <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                     <div className="accordion-body">
@@ -108,25 +112,25 @@ export class Mobiles extends Component {
                                                             <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                                             <label className="form-check-label" htmlFor="flexCheckDefault" >
                                                                 6 GB & Above
-                                                            </label>
+                                                        </label>
                                                         </div>
                                                         <div class="form-check">
                                                             <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
                                                             <label className="form-check-label" htmlFor="flexCheckChecked" >
                                                                 4 GB
-                                                             </label>
+                                                         </label>
                                                         </div>
                                                         <div class="form-check">
                                                             <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
                                                             <label className="form-check-label" htmlFor="flexCheckChecked" >
                                                                 3 GB
-                                                             </label>
+                                                         </label>
                                                         </div>
                                                         <div class="form-check">
                                                             <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
                                                             <label className="form-check-label" htmlFor="flexCheckChecked" >
                                                                 2 GB
-                                                             </label>
+                                                         </label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -144,19 +148,19 @@ export class Mobiles extends Component {
                                         <ul className="list-inline">
                                             <li className="list-inline-item">
                                                 Sort By :
-                                            </li>
-                                            <li className="list-inline-item">
+                                        </li>
+                                        <li className="list-inline-item">
                                                 <Link to="/Popularity" className="btn btn-link text-decoration-none">Popularity</Link>
                                             </li>
                                             <li className="list-inline-item">
-                                                <Link to="/AscOrder" className="btn btn-link text-decoration-none">Price - high to low</Link>
+                                                <button type="button" className="btn btn-link text-decoration-none active-link">Price - high to low</button>
                                             </li>
                                             <li className="list-inline-item">
-                                                <Link to="/DscOrder" className="btn btn-link text-decoration-none">Price - low to high</Link>
+                                                <Link to="/DscOrder" className="btn btn-link text-decoration-none ">Price - low to high</Link>
                                             </li>
                                         </ul>
                                     </li>
-                                    {DisplayMobiles}
+                                    {SortedMobiles}
 
                                 </ul>
                             </div>
@@ -165,40 +169,19 @@ export class Mobiles extends Component {
                 </div>
 
             </div>
+
         )
     }
 }
 const mapStateToProps = (state) => {
+
+
     return {
-        MyMobiles: state.Mobiles
+        AscMobiles: state.Mobiles
+
+
+
     }
 }
-// const mapDispatchToProps = (dispatch) => {
-// let data = ownProps
 
-
-
-
-
-// return {
-//     ShowPopularity: () => {
-//         dispatch({
-//             type: 'SHOWPOPULARITY_MOBILES'
-//         })
-//     }
-// ShowPriceHightoLow: () => {
-//     dispatch({
-//         type: 'SHOWPRICEHIGHTOLOW_MOBILES'
-//     })
-// },
-// ShowPriceLowtoHigh: () => {
-//     dispatch({
-//         type: 'SHOWPRICELOWTOHIGH_MOBILES'
-//     })
-// }
-// }
-
-// }
-
-export default connect(mapStateToProps)(Mobiles);
-
+export default connect(mapStateToProps)(Pricehightolow) 

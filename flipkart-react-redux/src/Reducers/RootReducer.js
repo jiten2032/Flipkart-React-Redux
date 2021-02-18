@@ -171,30 +171,31 @@ const initstate = {
 
 const RootReducer = (state = initstate, action) => {
     //  console.log(action);
-    switch (action.type) {
-        case "SHOWPOPULARITY_MOBILES":
-            return {
-                Mobiles: state.Mobiles.filter(star => star.Stars >= 4)
-            }
+    // switch (action.type) {
+    //     case "DISPLAY_DATA":
+    //     return {
+    //             Mobile: state.Mobiles.find(data => data.id == action.id)                                                                                                                         
+    //         }
+            
 
-        case "SHOWPRICEHIGHTOLOW_MOBILES":
-            let Pricehightolow = state.Mobiles.sort((a, b) => (a.Price > b.Price) ? -1 : 1) ;
-            // console.log(Pricehightolow);
+        // case "SHOWPRICEHIGHTOLOW_MOBILES":
+        //     let Pricehightolow = state.Mobiles.sort((a, b) => (a.Price > b.Price) ? -1 : 1) ;
+        //     // console.log(Pricehightolow);
 
-            return {
+        //     return {
 
-                Mobiles:Pricehightolow 
+        //         Mobiles:Pricehightolow 
                 
-            }
+        //     }
          
 
-        case "SHOWPRICELOWTOHIGH_MOBILES":
+        // case "SHOWPRICELOWTOHIGH_MOBILES":
 
-           return {
-                Mobiles: state.Mobiles.sort((a, b) => (a.Price > b.Price) ? 1 : -1)
-            }
+        //    return {
+        //         Mobiles: state.Mobiles.sort((a, b) => (a.Price > b.Price) ? 1 : -1)
+        //     }
 
-    }
+    // }
 
     return state;
 }
