@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import logo from '../IMAGES/logo.JPG';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 export class Navbar extends Component {
+
     render() {
-        const { propsdata } = this.props
-        console.log(propsdata.length);
+
+        const { MyMobilesdata } = this.props
+
         return (
             <div className="">
                 <div className="navbar navbar-expand-md navbar-dark bg-primary sticky-top" >
@@ -149,16 +152,24 @@ export class Navbar extends Component {
                                 <li className="nav-item">
                                     <Link to="/Orders" className="nav-link">Orders</Link>
                                 </li>
-                                <li className="nav-item" style={{ position: 'relative' }}>
-                                    <Link to="/Cart" className="nav-link">
-                                        <i className="material-icons">add_shopping_cart </i>
-                                        <span className="badge rounded-pill bg-danger"
-                                            style={{ position: 'absolute', bottom: '35px', left: '10px' }}>{this.props.propsdata.length}</span>
+                                {
+                                    MyMobilesdata.clicked ?
+                                        (<li className="nav-item" style={{ position: 'relative' }}>
+                                            <Link to="/Cart" className="nav-link">
+                                                <i className="material-icons">add_shopping_cart </i>
+                                                <span className="badge rounded-pill bg-danger" style={{ position: 'absolute', bottom: '35px', left: '10px' }}>
+                                                    {MyMobilesdata.count}
+                                                </span>
+                                                Cart</Link>
+                                        </li>)
+                                        :
+                                        null
 
-                                        Cart</Link>
-                                </li>
+                                }
+
+
+
                             </ul>
-
                         </div>
                     </div>
 
@@ -168,5 +179,9 @@ export class Navbar extends Component {
         )
     }
 }
-
-export default Navbar
+const mapStateToProps = (state) => {
+    return {
+        MyMobilesdata: state
+    }
+}
+export default connect(mapStateToProps)(Navbar)

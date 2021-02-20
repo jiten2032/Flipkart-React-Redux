@@ -11,7 +11,7 @@ export class Mobiles extends Component {
         // console.log(this.props);
         const { MyMobiles } = this.props;
 
-        let DisplayMobiles = MyMobiles.length ? (
+        const DisplayMobiles = MyMobiles.length ? (
             MyMobiles.map(Mobile => {
 
                 return (

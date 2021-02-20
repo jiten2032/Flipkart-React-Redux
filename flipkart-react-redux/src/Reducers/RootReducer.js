@@ -28,6 +28,7 @@ const initstate = {
                 Yarenty: '1 Year on Handset and 6 Months on Accessories',
                 Price: 8499,
                 DiscountPrice: '₹10,999 22% off',
+                TotalPrice:10999,
                 DiscountPercentage: '22% off',
                 Offer: 'Exchange,100%Money Back',
                 EMI: 'No Cost EMI',
@@ -46,6 +47,7 @@ const initstate = {
                 Processors: 'Mediatek Helio G80 Processor',
                 Yarenty: '1 Year on Handset and 6 Months on Accessories',
                 Price: 9499,
+                TotalPrice:12999,
                 DiscountPrice: '₹12,999',
                 DiscountPercentage: '23% off',
                 Offer: 'Exchange,100%Money Back',
@@ -66,6 +68,7 @@ const initstate = {
                 Processors: 'Qualcomm Snapdragon 732G Processor',
                 Yarenty: '1 Year on Handset and 6 Months on Accessories',
                 Price: 17999,
+                TotalPrice:20999,
                 DiscountPrice: '₹20,999',
                 DiscountPercentage: '₹14% off',
                 EMI: 'No Cost EMI',
@@ -86,7 +89,8 @@ const initstate = {
                 Processors: 'MediaTek Dimensity 1000+ (MT68889) Processor',
                 Yarenty: '1 Year on Handset including Battery and 6 Months on Accessories',
                 Price: 18999,
-                DiscountPrice: '₹20,999 ',
+                TotalPrice:21999,
+                DiscountPrice: '₹21,999 ',
                 DiscountPercentage: '14% off',
                 EMI: 'No Cost EMI',
                 Offer: 'Upto ₹16,500 Off on Exchange',
@@ -104,6 +108,7 @@ const initstate = {
                 Processors: 'Exynos 9611 Processor',
                 Yarenty: '1 Year on Handset including Battery and 6 Months on Accessories',
                 Price: 11999,
+                TotalPrice:16499,
                 DiscountPrice: '₹16499',
                 DiscountPercentage: '19% off',
                 Offer: 'Exchange,100%Money',
@@ -122,6 +127,7 @@ const initstate = {
                 Processors: 'MediaTek Helios G85 Processor',
                 Yarenty: '1 Year on Handset including Battery and 6 Months on Accessories',
                 Price: 10499,
+                TotalPrice:12999,
                 DiscountPrice: '₹12999',
                 DiscountPercentage: '19% off',
                 Offer: 'Exchange,100%Money',
@@ -140,6 +146,7 @@ const initstate = {
                 Processors: 'MediaTek Helios G85 Processor',
                 Yarenty: '1 Year on Handset including Battery and 6 Months on Accessories',
                 Price: 15680,
+                TotalPrice:12999,
                 DiscountPrice: '₹12,999',
                 DiscountPercentage: '19% off',
                 Offer: 'Exchange,100%Money',
@@ -158,6 +165,7 @@ const initstate = {
                 Processors: 'Qualcomm Snapdragon 865 Processor',
                 Yarenty: '1 Year on Handset including Battery and 6 Months on Accessories',
                 Price: 34999,
+                TotalPrice:42999,
                 DiscountPrice: '₹42,999',
                 DiscountPercentage: '18% off',
                 Offer: 'Exchange,100%Money',
@@ -166,17 +174,24 @@ const initstate = {
             }
 
         ]
+    ,
+    MobileData: [],
+    count: 0,
+    clicked: false
 };
 
 
 const RootReducer = (state = initstate, action) => {
-    //  console.log(action);
-    // switch (action.type) {
-    //     case "DISPLAY_DATA":
-    //     return {
-    //             Mobile: state.Mobiles.find(data => data.id == action.id)                                                                                                                         
-    //         }
-            
+    // console.log(action);
+    switch (action.type) {
+        case "ADD_POST":
+            return {
+                ...state,
+                MobileData: action.id,
+                clicked: true,
+                count:state.count+1
+            }
+
 
         // case "SHOWPRICEHIGHTOLOW_MOBILES":
         //     let Pricehightolow = state.Mobiles.sort((a, b) => (a.Price > b.Price) ? -1 : 1) ;
@@ -185,9 +200,9 @@ const RootReducer = (state = initstate, action) => {
         //     return {
 
         //         Mobiles:Pricehightolow 
-                
+
         //     }
-         
+
 
         // case "SHOWPRICELOWTOHIGH_MOBILES":
 
@@ -195,7 +210,7 @@ const RootReducer = (state = initstate, action) => {
         //         Mobiles: state.Mobiles.sort((a, b) => (a.Price > b.Price) ? 1 : -1)
         //     }
 
-    // }
+    }
 
     return state;
 }

@@ -76,56 +76,67 @@ import sideimg1 from '../IMAGES/sideimg1.jpeg';
 // import opporeno5 from '../IMAGES/opporeno5.jpeg';
 // import realmenarzo20 from '../IMAGES/realmenarzo20.jpeg';
 import { connect } from 'react-redux';
-// import { Mobile } from './Mobile';
+
 
 
 
 
 export class Home extends Component {
-    state = {
-        MobileData: []
-    }
+    // state = {
+    //     storemobilesData: [],
+    //     Clickcount: 0,
+    //     //  clicked: false
+    // }
 
     handleClick = (id) => {
-        const mydata = this.props.MyMobiles.find(data => data.id == id)
-        // console.log(mydata);
-        this.setState({
-            MobileData: mydata
-        })
+        const mystoredata = this.props.MyMobilesdata.find(data => data.id == id)
 
+        // this.setState({
+        //     storemobilesData: mystoredata,
+        //     Clickcount: this.state.Clickcount + 1,
+        //     clicked:true
+
+        // });
+    
+       this.props.addpost(mystoredata)
 
     }
 
     render() {
-        // console.log(this.state);
+       
         // console.log(this.props);
-        const { MyMobiles } = this.props;
-        const Showmobiles = MyMobiles.slice(0, 6);
-        const displaymobiles = Showmobiles.map(mobiles => {
+        const {  MyMobilesdata } = this.props;
+        const Showmobiles = MyMobilesdata.slice(0, 6);
+        const displaymobiles = Showmobiles.map(homeMobiles => {
             return (
 
-                <div className="col-sm-2" key={mobiles.id}>
+                <div className="col-sm-2" key={homeMobiles.id}>
                     <div className="card">
                         <a>
-                            <img className="card-img-top" id="Cardimg" src={mobiles.img} alt="My Img" srcSet="" />
+                            <img className="card-img-top" id="Cardimg" src={homeMobiles.img} alt="My Img" srcSet="" />
                         </a>
                         <div className="card-body lh-1">
-                            <h5 className="card-title"><a> {mobiles.Name}</a> </h5>
-                            <p className=""><span className="badge bg-success">{mobiles.Stars}*</span>
-                                {mobiles.Ratings}        </p>
-                            <p>₹{mobiles.Price} <span className="text-decoration-line-through text-secondary">{mobiles.DiscountPrice}</span> {mobiles.DiscountPercentage}</p>
-                            <a className="btn btn-success" onClick={() => { this.handleClick(mobiles.id) }}>Add to Cart</a>
+                            <h5 className="card-title"><a> {homeMobiles.Name}</a> </h5>
+                            <p className=""><span className="badge bg-success">{homeMobiles.Stars}*</span>
+                                {homeMobiles.Ratings}        </p>
+                            <p>₹{homeMobiles.Price} <span className="text-decoration-line-through text-secondary">{homeMobiles.DiscountPrice}</span> {homeMobiles.DiscountPercentage}</p>
+                            <a className="btn btn-success" onClick={() => { this.handleClick(homeMobiles.id) }}>Add to Cart</a>
                         </div>
                     </div>
                 </div>
             )
         })
 
-        const { MobileData } = this.state
+        // const { MobileData, count } = this.state
         return (
             <div className="flipkart">
 
-                <Navbar propsdata = { MobileData }  />
+                <Navbar 
+                // propsdata={this.state} 
+
+                />
+                
+                
                 {/* End of Navbar */}
 
                 <SubNavbar />
@@ -1678,9 +1689,18 @@ export class Home extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        MyMobiles: state.Mobiles
+        MyMobilesdata: state.Mobiles
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+       addpost:(id) =>{
+           dispatch({
+               type:'ADD_POST',id:id
+           })
+       }
     }
 }
 
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps,mapDispatchToProps)(Home)
