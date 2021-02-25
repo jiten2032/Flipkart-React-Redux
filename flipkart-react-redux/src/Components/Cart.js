@@ -9,11 +9,11 @@ export class Cart extends Component {
     render() {
         // console.log(this.props.cartdata);
         let { cartdata } = this.props;
-        let mycartdata = cartdata.MobileData.map(mobile =>{
-            return(
-                <div>{mobile.Name}</div>
-            )
-        })
+        // let mycartdata = cartdata.MobileData.map(mobile =>{
+        //     return(
+        //         <div>{mobile.Name}</div>
+        //     )
+        // })
 
 
 
@@ -104,7 +104,8 @@ export class Cart extends Component {
                                 <ul class="list-group list-group-flush">
                                     <li className="list-group-item fw-bold">My Cart ({cartdata.count})</li>
                                     <li className="list-group-item">
-                                { mycartdata} 
+                                {/* { mycartdata}  */}
+                                   hi
                                     </li>
                                     <li className="list-group-item">A third item</li>
                                 </ul>
